@@ -1,4 +1,6 @@
 .container {
-  margin: 0 auto;
-  max-width: 90vw;
+	/* display: flex;
+	align-items: center; */
+	max-width: 90vw;
+	margin: 0 auto;
 }
