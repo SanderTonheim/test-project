@@ -1,18 +1,17 @@
 .navbar {
 	height: 100%;
-	max-width: 100%;
 	background-color: rgb(35, 35, 35);
 	font-size: 1.3rem;
 	padding: 2rem;
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 }
 
 .links {
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	justify-content: space-evenly;
-	width: 100%;
 }
 
 .links a {
