@@ -1,4 +1,7 @@
-// Dette vises når en bruker ikke har noen ekstra parametere. Feks "side.no/brukere " ingen bruker parameter er satt inn.
+// Dette vises når en bruker ikke har noen ekstra parametere.
+// uten parameter = "www.side.no/brukere " ingen bruker parameter er satt inn.
+// med parameter = "www.side.no/brukere/sander"
+// sander er bruker parameter siden det kommer etter vi har gått inn i mappen "brukere"
 
 export default function ProfileDefault() {
 	return (
