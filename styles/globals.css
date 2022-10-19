@@ -1,7 +1,7 @@
 * {
 	margin: 0%;
-	min-width: fit-content; /*Fit content on smaller devices   */
-	max-width: 100%; /*Let content expand on larger devices   */
+	min-width: fit-content; /*Fit content on smaller devices*/
+		/* max-width: 100%; Let content expand on larger devices   */
 }
 
 html,
