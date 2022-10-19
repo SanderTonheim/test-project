@@ -14,9 +14,9 @@ export default function Profile() {
 	// slik at vi kan bare trener å bruke username og ikke username.username for å vise brukernavn / query tekst.
 	const { username } = router.query
 	// console logger ut objektet
-	console.log({ username })
+	// console.log({ username })
 	// console logger ut veriden til username inni objektet   
-	console.log(username)
+	// console.log(username)
 	return (
 		<>
 			{/* viser hei! {URL query teksten} */}
