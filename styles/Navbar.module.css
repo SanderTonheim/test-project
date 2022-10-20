@@ -1,24 +1,28 @@
 .navbar {
-	height: 100%;
-	background-color: rgb(35, 35, 35);
+	height: 4rem;
+	background-color: rgba(214, 210, 210, 0.504);
 	font-size: 1.3rem;
 	padding: 2rem;
 	display: flex;
 	justify-content: space-evenly;
+
 }
 
 .links {
 	width: 100%;
 	display: flex;
-	justify-content: center;
 	justify-content: space-evenly;
 }
 
 .links a {
-	color: white;
+	display: flex;
+	align-items: center;
+	height:90%;
+	color: rgb(67, 65, 65);
 	text-decoration: none;
-	border: solid white 2px;
-	padding: 4px 40px;
+	border: solid rgb(67, 65, 65) 2px;
+	margin: auto 0;
+	padding: 0 2rem;
 }
 
 .links a:hover {
