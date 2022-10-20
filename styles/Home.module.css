@@ -1,11 +1,5 @@
 .container {
-  height: 100%;
-  width: 100%;
-  background-color: rgb(195, 62, 62);
-}
-
-/* .navbar {
-	height: 100%;
+	height: auto;
 	width: 100%;
-	background-color: blue;
-} */
+	background-color: rgb(195, 62, 62);
+}
