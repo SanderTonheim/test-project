@@ -1,39 +1,19 @@
-import Head from 'next/head'
+import Image from 'next/image'
+import pic1 from '../asssets//knut.jpg'
+import pic2 from '../asssets/pexels.jpg'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
 	return (
-		<>
-			<div className={styles.container}>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
-				<h1>Velkommen </h1>
+		<main>
+			<h1>Velkommen </h1>
 
-			</div>
-		</>
+			<section className={styles.flex_block_1}>
+				<div className={styles.item_1}>
+					<Image src={pic1} width={3217} height={3741} />
+				</div>
+				<div className={styles.item_2}>asasdasdad</div>
+			</section>
+		</main>
 	)
 }
