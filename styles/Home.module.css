@@ -1,5 +1,18 @@
-.container {
+.flex_block_1 {
 	height: 100%;
 	width: 100%;
+	padding: 2rem 0;
 	background-color: rgb(195, 62, 62);
+	display: flex;
+	
+}
+
+.item_1 {
+	max-width: 30rem;
+	flex-wrap: wrap;
+}
+
+.item_2 {
+	max-width: 30rem;
+	flex-wrap: wrap;
 }
