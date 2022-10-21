@@ -6,7 +6,7 @@ export default function PageNotFound() {
 		<div className={styles.container}>
 			<h1>Fant ingen side!</h1>
 			<p>
-				Klikk her for å gå hjem <Link href='/'> </Link>{' '}
+				Klikk <Link href='/'>her </Link> for å gå hjem
 			</p>
 		</div>
 	)
