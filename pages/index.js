@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import pic1 from '../asssets//knut.jpg'
-import pic2 from '../asssets/pexels.jpg'
+import pic1 from '../asssets/knut.jpg'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
