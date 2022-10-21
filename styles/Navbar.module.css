@@ -13,21 +13,26 @@
 	padding: 1rem;
 	flex-wrap: wrap;
 }
+
+.logo {
+	width: 4.5rem;
+}
 .links {
-	max-width: 100%;
+	width: 100%;
+	height: fit-content;
 	display: flex;
-	justify-content: space-evenly;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
 }
 
 .links a {
 	display: flex;
 	align-items: center;
-	height: 90%;
-	color: rgb(67, 65, 65);
 	text-decoration: none;
 	border: solid rgb(67, 65, 65) 2px;
-	margin: auto 0;
-	padding: 0 2rem;
+	padding: 0.4rem 2rem;
+	color: rgb(67, 65, 65);
 }
 
 .links a:hover {
