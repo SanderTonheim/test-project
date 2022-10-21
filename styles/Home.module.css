@@ -4,15 +4,15 @@
 	padding: 2rem 0;
 	background-color: rgb(195, 62, 62);
 	display: flex;
-	
+	flex-wrap: wrap;
 }
 
 .item_1 {
-	max-width: 30rem;
+	width: 30rem;
 	flex-wrap: wrap;
 }
 
 .item_2 {
-	max-width: 30rem;
+	width: 30rem;
 	flex-wrap: wrap;
 }
