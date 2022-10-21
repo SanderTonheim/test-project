@@ -6,12 +6,14 @@ import Logo from '../asssets/logo.png'
 export default function Navbar() {
 	return (
 		<div className={styles.navbar}>
-			<Image src={Logo} width={70} height={100} />
+			<div className={styles.flex_container}>
+				<Image src={Logo} width={100} height={100} />
 
-			<div className={styles.links}>
-				<Link href='/'>Hjem</Link>
-				<Link href='/about'>About</Link>
-				<Link href='/prosjektet'>Prosjektet</Link>
+				<div className={styles.links}>
+					<Link href='/'>Hjem</Link>
+					<Link href='/about'>About</Link>
+					<Link href='/prosjektet'>Prosjektet</Link>
+				</div>
 			</div>
 		</div>
 	)
