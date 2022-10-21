@@ -7,7 +7,9 @@ export default function Navbar() {
 	return (
 		<div className={styles.navbar}>
 			<div className={styles.flex_container}>
-				<Image src={Logo} width={100} height={100} />
+				<div className={styles.logo}>
+					<Image src={Logo} width={776} height={800} />
+				</div>
 
 				<div className={styles.links}>
 					<Link href='/'>Hjem</Link>
