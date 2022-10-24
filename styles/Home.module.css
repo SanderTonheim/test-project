@@ -1,29 +1,104 @@
-.flex_block_1 {
-	min-height: 100%;
-	width: 100%;
-	padding: 2rem 0;
+.section_1 {
+	max-height: 40rem;
+	max-width: 100%;
+	background-image: url(../asssets/bg-hero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: blanchedalmond;
+}
+
+.content {
+	max-width: 100%;
+	margin: 0 2rem;
+	height: 100%;
 	display: flex;
-	justify-content: space-around;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
 
 .header {
-	text-align: center;
-	font-size: 2rem;
-	font-family: var(--default);
+	max-width: 100%;
+	height: auto;
+	font-size: 7rem;
+	font-family: var(--font);
+	color: white;
+	/* flex */
+	display: flex;
+	justify-content: center;
 }
 
 .item_1 {
-	max-width: 40rem;
-	flex-basis: 50%;
-}
-
-.item_2 {
-	padding: 0 2rem;
-	width: 50%;
 	font-size: 1.7rem;
 	font-family: var(--font);
-	color: var(--font-color);
+	color: white;
+}
+.section_2 {
+	margin: 10rem 0;
+	/* flex */
+	flex-grow: 1;
+	display: flex;
+}
+
+.s2_content {
+	max-height: auto;
+	background-color: antiquewhite;
+	margin: 4rem 0;
+
+	/* flex */
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.s2_image {
+	width: 20rem;
+}
+
+.s2_text {
+	/* flex basis = flex element width */
+	font-family: var(--font);
+	color: rgb(174, 172, 172);
+	font-size: var(--font-size);
+	max-width: 50%;
+	/* flex */
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.section_3 {
+	max-height: 100%;
+	margin: 2rem 0;
+}
+
+.s3_content {
+	max-height: auto;
+	background-color: antiquewhite;
+	margin: 10rem 0;
+
+	/* flex */
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+}
+
+.s3_image {
+	width: 37rem;
+	display: flex;
+	/* justify-content: center; */
+}
+
+.s3_text {
+	/* flex basis = flex element width */
+	font-family: var(--font);
+	color: rgb(174, 172, 172);
+	font-size: var(--font-size);
+	/* flex */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+	flex-basis: 30%;
+	font-size: 1.6rem;
 }

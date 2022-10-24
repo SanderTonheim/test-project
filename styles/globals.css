@@ -1,14 +1,16 @@
 @font-face {
 	font-family: 'BLOKK';
-	src: url('../asssets/BLOKK_BLOKKNeue/BLOKKNeue-Regular/webfonts/BLOKKNeue-Regular.ttf');
+	src: url('../asssets/BLOKKNeue-Regular.ttf');
 	font-weight: normal;
 	color: blue;
 }
 :root {
 	--font: BLOKK;
 	--font-color: rgb(54, 54, 54);
+	--font-size: 1.2rem;
 }
 * {
+	box-sizing: border-box;
 	padding: 0%;
 	margin: 0%;
 }
