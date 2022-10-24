@@ -1,18 +1,24 @@
-import Image from 'next/image'
-import pic1 from '../asssets/knut.jpg'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
 	return (
-		<main>
-			<h1>Velkommen </h1>
-
-			<section className={styles.flex_block_1}>
-				<div className={styles.item_1}>
-					<Image src={pic1} width={3217} height={3741} />
-				</div>
-				<div className={styles.item_2}>asasdasdad</div>
-			</section>
-		</main>
+		<>
+			<div className={styles.header}>
+				<h1>Velkommen </h1>
+			</div>
+			<div className={styles.item_2}>
+				<p>
+					What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
+					and typesetting industry. Lorem Ipsum has been the industry's standard
+					dummy text ever since the 1500s, when an unknown printer took a galley
+					of type and scrambled it to make a type specimen book. It has survived
+					not only five centuries, but also the leap into electronic
+					typesetting, remaining essentially unchanged. It was popularised in
+					the 1960s with the release of Letraset sheets containing Lorem Ipsum
+					passages, and more recently with desktop publishing software like
+					Aldus PageMaker including versions of Lorem Ipsum.
+				</p>
+			</div>
+		</>
 	)
 }

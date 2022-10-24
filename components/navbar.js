@@ -8,7 +8,11 @@ export default function Navbar() {
 		<div className={styles.navbar}>
 			<div className={styles.flex_container}>
 				<div className={styles.logo}>
-					<Image src={Logo} width={776} height={800} />
+					<Image
+						src={Logo}
+						width={776}
+						height={800}
+					/>
 				</div>
 
 				<div className={styles.links}>

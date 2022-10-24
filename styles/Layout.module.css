@@ -1,6 +1,4 @@
 .content {
 	width: 90vw;
-	min-height: 100%;
-	margin: 0 auto;
-	padding: 2rem 0;
+	height: 100%;
 }

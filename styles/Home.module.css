@@ -1,18 +1,29 @@
 .flex_block_1 {
-	height: 100%;
+	min-height: 100%;
 	width: 100%;
 	padding: 2rem 0;
-	background-color: rgb(195, 62, 62);
 	display: flex;
-	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.header {
+	text-align: center;
+	font-size: 2rem;
+	font-family: var(--default);
 }
 
 .item_1 {
-	width: 30rem;
-	flex-wrap: wrap;
+	max-width: 40rem;
+	flex-basis: 50%;
 }
 
 .item_2 {
-	width: 30rem;
-	flex-wrap: wrap;
+	padding: 0 2rem;
+	width: 50%;
+	font-size: 1.7rem;
+	font-family: var(--font);
+	color: var(--font-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
