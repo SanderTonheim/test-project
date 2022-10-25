@@ -1,25 +1,32 @@
 import Axios from 'axios'
+import styles from '../../styles/profileIndex.module.css'
 
 // for å få tilgang til dataen som ble returnert av API setter vi "profiles" som argument i "ProfileList" funksjonen.
 // verdien til profiles er array'en med profiler/data
 const ProfileList = ({ profiles }) => {
-	console.log(profiles)
 	return (
 		// her sier vi hva vi skal returnere fra komponenten.
 		// returner en div
-		<div>
+		<divc className={styles.container}>
 			{/* inni div'en skal det som retuneres fra map funskjonen vises.  */}
 			{/* map funksjon:  vi setter inn et argument som vi kan kalle hva vi vil.*/}
 			{/* Alle objekter som ligger inni "profiles" skal nå bli refert til som profile. eks 0.name="sander" = profile.name="sander"  */}
 			{/* Return fra map funkjsonen sier hva den skal vise for hvert obejkt. "For hver "profile" i listen skal du vise en h1 med tekst fra profile.name variabelen. */}
 			{profiles.map((profile) => {
 				return (
-					<div>
+					<div className={styles.card}>
 						<h1>{profile.company.name} </h1>
+						<p>
+							Lorem Ipsum is simply dummy text of the printing and typesetting
+							industry. Lorem Ipsum has been the industry's standard dummy text
+							ever since the 1500s, when an unknown printer took a galley of
+							type and scrambled it to make a type specimen book. It has
+							survived not only five centuries, but also the leap into
+						</p>
 					</div>
 				)
 			})}
-		</div>
+		</divc>
 	)
 }
 

@@ -1,0 +1,17 @@
+.container {
+	border: 2px solid black;
+	height: 100%;
+	width: 100%;;
+	/* flex */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.card {
+  height: 100%;
+	width: 100%;
+	padding: 2rem;
+	border: 2px solid salmon;
+  flex-basis: 40rem;
+}
