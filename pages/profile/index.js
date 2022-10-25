@@ -3,13 +3,17 @@
 // med parameter = "www.side.no/brukere/sander"
 // sander er bruker parameter siden det kommer etter vi har gått inn i mappen "brukere"
 
+{
+	/* 
+TODO: 
+	Side med liste over profiler.
+ */
+}
+
 export default function ProfileDefault() {
 	return (
 		<>
-			<h1>
-				Ai! Her var det ingen profiler! <br />
-				Gå tilbake og prøv på nytt
-			</h1>
+			
 		</>
 	)
 }
