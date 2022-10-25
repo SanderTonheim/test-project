@@ -8,22 +8,14 @@ export default function Home() {
 		<main>
 			<section className={styles.section_1}>
 				<div className={styles.content}>
-					<div className={styles.header}>
-						<h1>Velkommen </h1>
-					</div>
-
+					<h1 className={styles.header}>Velkommen</h1>
 					<div className={styles.item_1}>
 						<p>
 							What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
 							printing and typesetting industry. Lorem Ipsum has been the
 							industry's standard dummy text ever since the 1500s, when an
 							unknown printer took a galley of type and scrambled it to make a
-							type specimen book. It has survived not only five centuries, but
-							also the leap into electronic typesetting, remaining essentially
-							unchanged. It was popularised in the 1960s with the release of
-							Letraset sheets containing Lorem Ipsum passages, and more recently
-							with desktop publishing software like Aldus PageMaker including
-							versions of Lorem Ipsum.
+							type specimen book. It has survived not only.
 						</p>
 					</div>
 				</div>
@@ -72,33 +64,31 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className={styles.section_3}>
-				<div className={styles.s3_content}>
-					<div className={styles.s3_image}>
-						<Image
-							src={image_s3}
-							alt='plant'
-						/>
-					</div>
-
-					<div className={styles.s3_text}>
-						<span className={styles.s3_header_text}>
-							<h2>lskdfjksdf sdfsdsd</h2>
-						</span>
-						<br />
-						<p>
-							But I must explain to you how all this mistaken idea of denouncing
-							pleasure and praising pain was born and I will give you a complete
-							account of the system, and expound the actual teachings of the
-							great explorer of the truth, the master-builder of human
-							happiness. No one rejects, dislikes, or avoids pleasure itself,o
-							do not know how to pursue pleasure rationally encounter
-							consequences because it is pleasure, but because those wh
-						</p>
-						<br />
-					</div>
+			<div className={styles.s3_content}>
+				<div className={styles.s3_image}>
+					<Image
+						src={image_s3}
+						alt='plant'
+					/>
 				</div>
-			</section>
+
+				<div className={styles.s3_text}>
+					<span className={styles.s3_header_text}>
+						<h2>lskdfjksdf sdfsdsd</h2>
+					</span>
+					<br />
+					<p>
+						But I must explain to you how all this mistaken idea of denouncing
+						pleasure and praising pain was born and I will give you a complete
+						account of the system, and expound the actual teachings of the great
+						explorer of the truth, the master-builder of human happiness. No one
+						rejects, dislikes, or avoids pleasure itself,o do not know how to
+						pursue pleasure rationally encounter consequences because it is
+						pleasure, but because those wh
+					</p>
+					<br />
+				</div>
+			</div>
 		</main>
 	)
 }
