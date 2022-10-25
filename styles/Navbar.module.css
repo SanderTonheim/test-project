@@ -5,12 +5,12 @@
 	background-color: rgb(227, 225, 225);
 	font-size: 1.3rem;
 	z-index: 10;
+	padding: 0.5rem;
 	/* flex */
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	padding: 0.5rem;
-
+	flex-wrap: wrap;
 }
 
 .logo {
