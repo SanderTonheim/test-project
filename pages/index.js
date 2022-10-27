@@ -2,8 +2,10 @@ import styles from '../styles/Home.module.css'
 import s2_1 from '../asssets/pic_s2_1.jpg'
 import image_s3 from '../asssets/image_s3.jpg'
 import Image from 'next/image'
+import { useContext } from 'react'
 
-export default function Home() {
+export default function Home(context) {
+	console.log(context);
 	return (
 		<main>
 			<section className={styles.section_1}>

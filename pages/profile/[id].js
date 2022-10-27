@@ -1,3 +1,7 @@
+import Image from 'next/image'
+import styles from '../../styles/IdPage.module.css'
+import placeholder from '../../asssets/owner_placeholder.svg'
+
 // [] rundt navnet sier til next at dette er en side som er dynamisk. Layouten endrer seg ikke, men innholdet endrer seg utifra hvilke id funksjonen mottar.
 // denne filer er en "templet" for hvordan "profile/[id]" siden skal se ut.
 // Her skriver vi også hvilke sider som skal bli generert på serveren når siden skal bygget til produksjon.
@@ -46,12 +50,14 @@ export const getStaticProps = async (context) => {
 	// fetch request for hver enkelt id. url/ + id variabel.
 	// await for å vente på svar fra API.
 	const res = await fetch('https://jsonplaceholder.typicode.com/users/' + id)
+	console.log(context)
 
 	// vent til konverteringen av res til json format er ferdig.
 	const data = await res.json()
 
 	// returner et objekt med navn props fra denne funkjsonen. Slik at Details funkjsonen får tilgang til dataen som ble hentet fra fetch.
 	// objekt inneholder profile variabel med verdien til dataen som ble returnet fra fetch.
+
 	return {
 		props: { profile: data },
 	}
@@ -63,11 +69,71 @@ const Details = ({ profile }) => {
 	// sier hva som skal returneres fra profile.
 	return (
 		// for hver enkelt id side vises en div
-		<div>
-			{/* Viser en <h1> med navnet til bedriften */}
-			<h1> {profile.company.name} </h1>
+		<div className={styles.container}>
+			<div className={styles.companyname}>
+				{/* Viser en <h1> med navnet til bedriften */}
+				<h1> {profile.company.name} </h1>
+				<h2>"{profile.company.catchPhrase}" </h2>
+			</div>
+
 			{/* viser tekst og navnet til bedriften */}
-			<p>The owner of this astablishment is {profile.name} </p>
+			<section className={styles.section}>
+				<main className={styles.content}>
+					<div className={styles.owner}>
+						<Image
+							src={placeholder}
+							width={200}
+							height={200}
+						/>
+						<p>Owner {profile.name} </p>
+					</div>
+
+					<div className={styles.text}>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							Pellentesque adipiscing commodo elit at imperdiet dui accumsan.
+							Purus non enim praesent elementum. Diam phasellus vestibulum lorem
+							sed risus. Lectus magna fringilla urna porttitor rhoncus dolor
+							purus non enim. Potenti nullam ac tortor vitae. Lacinia quis vel
+							eros donec ac. Gravida neque convallis a cras semper auctor.
+							Aliquam id diam maecenas ultricies mi eget mauris. At augue eget
+							arcu dictum varius duis. Aenean sed adipiscing diam donec
+							adipiscing tristique risus nec. Nullam non nisi est sit. <br />
+							<br /> Pharetra magna ac placerat vestibulum lectus mauris
+							ultrices eros in. Accumsan tortor posuere ac ut consequat semper
+							viverra nam. Ultrices sagittis orci a scelerisque purus semper
+							eget. Pellentesque elit ullamcorper dignissim cras tincidunt
+							lobortis feugiat. Auctor augue mauris augue neque gravida in
+							fermentum et. Ultrices eros in cursus turpis. Morbi tristique
+							senectus et netus et malesuada fames ac. Neque ornare aenean
+							euismod elementum nisi quis eleifend quam. Diam in arcu cursus
+							euismod. Phasellus egestas tellus rutrum tellus. Lectus proin nibh
+							nisl condimentum id venenatis a condimentum vitae. Vitae congue
+							mauris rhoncus aenean vel elit scelerisque mauris pellentesque.
+							Adipiscing bibendum est ultricies integer quis auctor elit sed
+							vulputate. Diam maecenas ultricies mi eget mauris pharetra. Amet
+							nisl suscipit adipiscing bibendum est ultricies integer quis.
+							Viverra nam libero justo laoreet sit amet. Convallis posuere morbi
+							leo urna molestie. Quisque id diam vel quam elementum. Porta lorem
+							mollis aliquam ut porttitor leo a diam. Sed cras ornare arcu dui
+							vivamus arcu felis bibendum ut. Malesuada fames ac turpis egestas
+							maecenas pharetra convallis. Quisque id diam vel quam elementum
+							pulvinar etiam non quam. Porttitor massa id neque aliquam
+							vestibulum morbi. Tellus pellentesque eu tincidunt tortor aliquam.
+							Nisl suscipit adipiscing bibendum est ultricies integer quis
+						</p>
+					</div>
+					<div className={styles.contact}>
+						<ul>
+							<li>{profile.address.street}</li>
+							<li>{profile.address.suite}</li>
+							<li>{profile.address.city}</li>
+							<li>{profile.address.zipcode}</li>
+						</ul>
+					</div>
+				</main>
+			</section>
 		</div>
 	)
 }

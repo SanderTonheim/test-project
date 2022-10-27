@@ -22,7 +22,7 @@ export const getStaticProps = async () => {
 // for å få tilgang til dataen som blir returnert av getStaticProps funksjonen setter vi "profiles" som argument i "ProfileList" funksjonen.
 // verdien til profiles er array'en med profiler/data fra props objektet som ble returnert fra getStaticProps.
 
-const ProfileList = ({ profiles }) => {
+const ProfileList = ({ profiles } ) => {
 	return (
 		// her sier vi hva vi skal returnere fra ProfileList funkjsonen.
 
