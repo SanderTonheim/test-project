@@ -22,7 +22,7 @@ export const getStaticProps = async () => {
 // for å få tilgang til dataen som blir returnert av getStaticProps funksjonen setter vi "profiles" som argument i "ProfileList" funksjonen.
 // verdien til profiles er array'en med profiler/data fra props objektet som ble returnert fra getStaticProps.
 
-const ProfileList = ({ profiles } ) => {
+const ProfileList = ({ profiles }) => {
 	return (
 		// her sier vi hva vi skal returnere fra ProfileList funkjsonen.
 
@@ -34,6 +34,7 @@ const ProfileList = ({ profiles } ) => {
 			{profiles.map((profile) => {
 				return (
 					// Lag <h1>
+
 					<h1>
 						{/*sett <h1> til å fungere som en link/klikkbar  */}
 						<Link
@@ -48,6 +49,8 @@ const ProfileList = ({ profiles } ) => {
 							{/* tekst som skal vises mellom <h1> taggene  */}
 							{profile.company.name}
 						</Link>
+
+
 					</h1>
 				)
 			})}
