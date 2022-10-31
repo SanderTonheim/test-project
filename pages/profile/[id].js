@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styles from '../../styles/idPage.module.css'
-import placeholder from '../../asssets/owner_placeholder.svg'
+import placeholder from '../../assets/owner_placeholder.svg'
+import Popup from '../../components/popup'
 
 // [] rundt navnet sier til next at dette er en side som er dynamisk. Layouten endrer seg ikke, men innholdet endrer seg utifra hvilke id funksjonen mottar.
 // denne filer er en "templet" for hvordan "profile/[id]" siden skal se ut.
@@ -63,7 +64,6 @@ export const getStaticProps = async (context) => {
 // Fuknker som en templet for hvordan alle side.no/profile/id sider skal se ut.
 // Destrkturer props som ble returnert fra getStaticProps funksjonen. Setter profile som props i Details funksjonen for å få tilgang til dataen.
 const Details = ({ profile }) => {
-	console.log(profile)
 	// sier hva som skal returneres fra profile.
 	return (
 		<section className={styles.section}>
@@ -118,6 +118,7 @@ const Details = ({ profile }) => {
 					</p>
 				</div>
 				<div className={styles.contact}>
+					<Popup test={profile} />
 					<ul>
 						<li>{profile.address.street}</li>
 						<li>{profile.address.suite}</li>

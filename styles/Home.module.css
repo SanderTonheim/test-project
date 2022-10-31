@@ -1,96 +1,70 @@
 .section_1 {
-	min-height: 50rem;
 	height: 100%;
-	background-image: url(../asssets/bg-hero.jpg);
+	background-image: url(../assets/bg-hero.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-color: blanchedalmond;
-	/* flex: ; */
+	padding: 5rem 0;
+	/* --------------------------------- flex: ; -------------------------------- */
 	display: flex;
 	max-width: 100%;
 	justify-content: center;
 }
 
+.s1_header {
+	color: white;
+	font-size: 4rem;
+}
+
+.s1_text {
+	color: white;
+	font-size: 1.5rem;
+}
+
 .content {
 	max-height: 100%;
 	max-width: 100%;
-	/* flex */
+	/* ---------------------------------- flex ---------------------------------- */
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-	flex-basis: 50rem;
 	align-items: center;
-	flex-wrap: wrap;
+	justify-content: center;
+	padding: 1rem;
+	gap: 3rem;
 }
 
 .header {
-	overflow: hidden;
-	font-size: 6rem;
-	font-family: var(--font);
-	color: white;
+	color: rgb(31, 29, 29);
+	font-size: 2rem;
 }
 
 .item_1 {
 	font-size: 1.7rem;
-	font-family: var(--font);
 	color: white;
 }
 
-.s2_content {
-	background-color: rgb(102, 100, 98);
-	padding: 4rem 0;
-
-	/* flex */
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
+.s2_header {
+	font-family: var(--font);
+	font-size: 2rem;
 }
 
 .s2_image {
 	width: 20rem;
 }
 
-.s2_text {
-	/* flex basis = flex element width */
-	font-family: var(--font);
-	color: rgb(174, 172, 172);
-	font-size: var(--font-size);
-	/* flex */
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 1rem;
-	flex-basis: 50%;
-}
-
-.s3_content {
-	max-height: auto;
-	background-color: antiquewhite;
-	padding: 10rem 0;
-
-	/* flex */
-	display: flex;
-	justify-content: space-evenly;
-	flex-direction: row-reverse;
-	flex-wrap: wrap;
-}
-
 .s3_image {
-	width: 37rem;
+	width: 20rem;
 	display: flex;
 	/* justify-content: center; */
 }
 
-.s3_text {
-	font-family: var(--font);
-	color: rgb(174, 172, 172);
-	font-size: var(--font-size);
-	/* flex basis = flex element width */
-	/* flex */
+.text {
+	/* font-family: var(--font); */
+	color: rgb(109, 109, 109);
+	/* ---------------------------------- flex ---------------------------------- */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	gap: 1rem;
 	flex-basis: 30%;
-	font-size: 1.6rem;
+	font-size: 1.3rem;
 }

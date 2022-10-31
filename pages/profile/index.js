@@ -34,8 +34,7 @@ const ProfileList = ({ profiles }) => {
 			{profiles.map((profile) => {
 				return (
 					// Lag <h1>
-
-					<div className={styles.test}>
+					<div className='test'>
 						{/* sett <h1> til å fungere som en link/klikkbar  */}
 						<Link
 							// path til hvor linken skal sende brukeren.
