@@ -1,22 +1,25 @@
 {
-  "name": "test-project",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "axios": "^1.1.3",
-    "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "eslint": "8.25.0",
-    "eslint-config-next": "12.3.1",
-    "gh-pages": "^4.0.0"
-  }
+	"name": "test-project",
+	"version": "0.1.0",
+	"homepage": "https://sandertonheim.github.io/test-project/",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
+	},
+	"dependencies": {
+		"axios": "^1.1.3",
+		"next": "12.3.1",
+		"react": "18.2.0",
+		"react-dom": "18.2.0"
+	},
+	"devDependencies": {
+		"eslint": "8.25.0",
+		"eslint-config-next": "12.3.1",
+		"gh-pages": "^4.0.0"
+	}
 }
