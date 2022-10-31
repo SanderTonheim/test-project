@@ -35,8 +35,8 @@ const ProfileList = ({ profiles }) => {
 				return (
 					// Lag <h1>
 
-					<h1>
-						{/*sett <h1> til å fungere som en link/klikkbar  */}
+					<div className={styles.test}>
+						{/* sett <h1> til å fungere som en link/klikkbar  */}
 						<Link
 							// path til hvor linken skal sende brukeren.
 							// send bruker til url/profile(mappe)/ + profile.id som kommer fra objektet.
@@ -49,9 +49,7 @@ const ProfileList = ({ profiles }) => {
 							{/* tekst som skal vises mellom <h1> taggene  */}
 							{profile.company.name}
 						</Link>
-
-
-					</h1>
+					</div>
 				)
 			})}
 		</div>
