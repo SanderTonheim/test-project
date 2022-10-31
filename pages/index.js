@@ -18,9 +18,9 @@ export default function Home(context) {
 				</div>
 			</section>
 
-			<section className={styles.section}>
+			<section className={(styles.section, styles.section_2)}>
+				<h2 className={styles.header}>The hidden secrets</h2>
 				<div className={styles.content}>
-					<h2 className={styles.header}>The hidden secrets</h2>
 					<div className={styles.s2_image}>
 						<Image
 							src={s2_1}
@@ -47,10 +47,10 @@ export default function Home(context) {
 					</div>
 				</div>
 			</section>
-			<section className={styles.section}>
-				<div className={styles.content}>
-					<h2 className={styles.header}>On the move</h2>
 
+			<section className={(styles.section, styles.section_3)}>
+				<h2 className={styles.header}>On the move</h2>
+				<div className={styles.content}>
 					<div className={styles.s3_image}>
 						<Image
 							src={image_s3}
