@@ -12,10 +12,7 @@ export default function Home(context) {
 					<div className={styles.s1_text}>
 						<p>
 							What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-							printing and typesetting industry. Lorem Ipsum has been the
-							industry's standard dummy text ever since the 1500s, when an
-							unknown printer took a galley of type and scrambled it to make a
-							type specimen book. It has survived not only.
+							universe.
 						</p>
 					</div>
 				</div>
@@ -23,9 +20,7 @@ export default function Home(context) {
 
 			<section className={styles.section}>
 				<div className={styles.content}>
-					<div className={styles.header}>
-						<h2>Ontemove</h2>
-					</div>
+					<h2 className={styles.header}>The hidden secrets</h2>
 					<div className={styles.s2_image}>
 						<Image
 							src={s2_1}
@@ -54,9 +49,7 @@ export default function Home(context) {
 			</section>
 			<section className={styles.section}>
 				<div className={styles.content}>
-					<div className={styles.header}>
-						<h2>Ontemove</h2>
-					</div>
+					<h2 className={styles.header}>On the move</h2>
 
 					<div className={styles.s3_image}>
 						<Image

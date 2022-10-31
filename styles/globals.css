@@ -1,19 +1,21 @@
 @font-face {
-	font-family: 'BLOKK';
-	src: url('../assets/BLOKKNeue-Regular.ttf');
+	font-family: 'Montserrat';
+	src: url('../assets/Montserrat/Montserrat-VariableFont_wght.ttf');
 	font-weight: normal;
-	color: blue;
 }
 :root {
-	--font: BLOKK;
-	--font-color: rgb(54, 54, 54);
-	--font-size: 1.2rem;
+	--font: Montserrat;
+	--font-size: 1rem;
+	--h1: 4rem;
+	--h2: 2.5rem;
 }
 * {
 	box-sizing: border-box;
 	padding: 0%;
 	margin: 0%;
 	max-width: 100%;
+	font-size: var(--font-size);
+	font-family: var(--font);
 }
 
 html,
