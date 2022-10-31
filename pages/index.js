@@ -7,7 +7,7 @@ export default function Home(context) {
 	return (
 		<main>
 			<section className={styles.section_1}>
-				<div className={styles.content}>
+				<div className={styles.s1_content}>
 					<h1 className={styles.s1_header}>Plant Land</h1>
 					<div className={styles.s1_text}>
 						<p>
