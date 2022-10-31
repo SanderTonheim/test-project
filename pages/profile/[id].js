@@ -130,5 +130,8 @@
 // 		</section>
 // 	)
 // }
+const Details = () => {
+	console.log('hi')
+}
 
-// export default Details
+export default Details

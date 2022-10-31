@@ -54,7 +54,7 @@ export default function Home(context) {
 					<div className={styles.s3_image}>
 						<Image
 							src={image_s3}
-							alt='plant'
+							alt='pla'
 						/>
 					</div>
 
