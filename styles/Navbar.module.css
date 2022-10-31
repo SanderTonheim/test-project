@@ -2,22 +2,25 @@
 	position: sticky;
 	top: 0%;
 	max-width: 100%;
-	background-color: rgb(212, 208, 208);
+	background-color: #f5f5f4;
 	font-size: 1.3rem;
 	z-index: 10;
-	padding: 0.5rem;
+	height: auto;
+	padding: 0 1rem 1rem;
 	/* flex */
 	display: flex;
-	justify-content: space-around;
+	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
-	flex-wrap: wrap;
 }
 
 .logo {
 	width: 3rem;
+	margin: 1rem 0;
 }
 .links {
 	width: 40rem;
+	/* ---------------------------------- flex ---------------------------------- */
 	display: flex;
 	justify-content: space-between;
 }
