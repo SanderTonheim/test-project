@@ -21,7 +21,12 @@ const ProfileList = ({ profiles }) => {
 			<h1 className={s.header}>Medlemsliste</h1>
 			<div className={s.btn_list}>
 				{profiles.map((profile) => {
-					return <PopUp name={profile.name} />
+					return (
+						<PopUp
+							key={profile.name}
+							name={profile.name}
+						/>
+					)
 				})}
 			</div>
 		</div>
