@@ -31,7 +31,7 @@
 	justify-content: center;
 	padding: 1rem;
 	gap: 3rem;
-	background-color: rgb(212, 216, 212);
+	background-color: #f5f5f4;
 }
 
 .s1_content {
@@ -49,6 +49,7 @@
 .header {
 	color: rgb(31, 29, 29);
 	font-size: 2rem;
+	text-decoration: underline;
 }
 
 .item_1 {
@@ -62,23 +63,21 @@
 }
 
 .s2_image {
-	width: 20rem;
+	width: 22rem;
 }
 
 .s3_image {
-	width: 20rem;
+	width: 100%;
+	/* ---------------------------------- flex ---------------------------------- */
 	display: flex;
-	/* justify-content: center; */
 }
 
 .text {
-	/* font-family: var(--font); */
 	color: rgb(109, 109, 109);
 	/* ---------------------------------- flex ---------------------------------- */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	gap: 1rem;
-	flex-basis: 30%;
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 }
