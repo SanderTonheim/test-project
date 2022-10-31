@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Navbar.module.css'
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.svg'
 
 export default function Navbar() {
 	return (
@@ -9,8 +9,8 @@ export default function Navbar() {
 			<div className={styles.logo}>
 				<Image
 					src={Logo}
-					width={776}
-					height={800}
+					width={1600}
+					height={1041}
 				/>
 			</div>
 			<div className={styles.links}>
