@@ -20,7 +20,7 @@ const ProfileList = ({ profiles }) => {
 		<div className={s.container}>
 			<h1 className={s.header}>Medlemsliste</h1>
 			{profiles.map((profile) => {
-				console.log(profile)
+	console.log(profile)
 
 				return (
 					<div className={s.modal_container}>
