@@ -68,14 +68,19 @@ export const getStaticProps = async (context) => {
 
 	/* 	returner et objekt med navn props fra denne funkjsonen. Slik at Details funkjsonen får tilgang til dataen som ble hentet fra fetch.
 	objekt inneholder profile variabel med verdien til dataen som ble returnet fra fetch.	console.log(params)*/
+
 	return {
 		props: { profile: data },
 	}
 }
-// Fuknker som en templet for hvordan alle side.no/profile/id sider skal se ut.
-// Destrkturer props som ble returnert fra getStaticProps funksjonen. Setter profile som props i Details funksjonen for å få tilgang til dataen.
+
+/* Fuknker som en templet for hvordan alle side.no/profile/id sider skal se ut.
+Destrkturer props som ble returnert fra getStaticProps funksjonen. Setter profile som props i Details funksjonen for å få tilgang til dataen.
+ */
 const Details = ({ profile }) => {
+
 	// sier hva som skal returneres fra profile.
+	
 	return (
 		<section className={styles.section}>
 			<div className={styles.companyname}>
