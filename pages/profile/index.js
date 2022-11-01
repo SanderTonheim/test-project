@@ -1,15 +1,12 @@
-import Axios from 'axios'
 import Link from 'next/link'
 import s from '../../styles/profileIndex.module.css'
 
 /* --------------------------- Get data from API --------------------------- */
 export const getStaticProps = async () => {
-	const data = await Axios.get('https://jsonplaceholder.typicode.com/users')
-
+	const res = await fetch('https://jsonplaceholder.typicode.com/users')
+	const data = await res.json()
 	return {
-		props: {
-			profiles: data.data,
-		},
+		props: { profiles: data },
 	}
 }
 
@@ -20,15 +17,13 @@ const ProfileList = ({ profiles }) => {
 		<div className={s.container}>
 			<h1 className={s.header}>Medlemsliste</h1>
 			{profiles.map((profile) => {
-	console.log(profile)
-
 				return (
 					<div className={s.modal_container}>
 						<Link
 							href={'/profile/' + profile.name}
 							key={profile.id}
 						>
-							{profile.company.name}
+							{profile.name}
 						</Link>
 					</div>
 				)
