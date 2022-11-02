@@ -5,26 +5,30 @@ import s from '../../styles/profileIndex.module.css'
 export const getStaticProps = async () => {
 	const res = await fetch('https://jsonplaceholder.typicode.com/users')
 	const data = await res.json()
+	/* -------------------------------------------------------------------------- */
+	/*                        return object with name props                       */
+	/* -------------------------------------------------------------------------- */
 	return {
-		props: { profiles: data },
+		props: { companys: data },
 	}
 }
 
 /* ------------------------------------ Render items on page ----------------------------------- */
 
-const ProfileList = ({ profiles }) => {
+const ProfileList = ({ companys }) => {
 	return (
 		<div className={s.container}>
-			<h1 className={s.header}>Medlemsliste</h1>
-			{profiles.map((profile) => {
+			{<h1 className={s.header}>Medlemsliste</h1>}
+			{/*
+			 -------------------------------------------------------------------------- 
+			 for each object in companys[] give this name 
+			--------------------------------------------------------------------------
+			*/}
+			{companys.map((company) => {
 				return (
 					<div className={s.modal_container}>
-						<Link
-							href={'/profile/' + profile.name}
-							key={profile.id}
-						>
-							{profile.name}
-						</Link>
+						{/* address to page */}
+						<Link href={'/profile/' + company.id}>{company.name}</Link>
 					</div>
 				)
 			})}
