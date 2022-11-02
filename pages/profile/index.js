@@ -28,7 +28,12 @@ const ProfileList = ({ companys }) => {
 				return (
 					<div className={s.modal_container}>
 						{/* address to page */}
-						<Link key={company.id} href={'/profile/' + company.id}>{company.name}</Link>
+						<Link
+							key={company.id}
+							href={'/profile/' + company.id}
+						>
+							{company.name}
+						</Link>
 					</div>
 				)
 			})}
