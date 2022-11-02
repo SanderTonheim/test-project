@@ -26,14 +26,12 @@ const ProfileList = ({ companys }) => {
 			*/}
 			{companys.map((company) => {
 				return (
-					<div className={s.modal_container}>
+					<div
+						key={company.id}
+						className={s.modal_container}
+					>
 						{/* address to page */}
-						<Link
-							key={company.id}
-							href={'/profile/' + company.id}
-						>
-							{company.name}
-						</Link>
+						<Link href={'/profile/' + company.id}>{company.name}</Link>
 					</div>
 				)
 			})}
