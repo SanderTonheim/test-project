@@ -3,7 +3,7 @@ import s2_1 from '../assets/pic_s2_1.jpg'
 import image_s3 from '../assets/image_s3.jpg'
 import Image from 'next/image'
 
-export default function Home(context) {
+export default function Home() {
 	return (
 		<main>
 			<section className={styles.section_1}>
