@@ -11,6 +11,7 @@ export default function Navbar() {
 					src={Logo}
 					width={1600}
 					height={1041}
+					alt=''
 				/>
 			</div>
 			<div className={styles.links}>
