@@ -1,0 +1,6 @@
+.menu {
+	height: 20rem;
+	width: 20rem;
+	background-color: black;
+	z-index: 1000;
+}
