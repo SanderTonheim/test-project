@@ -15,29 +15,32 @@ export default function Navbar() {
 		console.log(open)
 	}
 	return (
-		<div className={s.navbar}>
-			<div className={s.logo}>
-				<Image
-					src={Logo}
-					width={1600}
-					height={1041}
-					alt=''
-				/>
+		<>
+			<div className={s.navbar}>
+				<div className={s.logo}>
+					<Image
+						src={Logo}
+						width={1600}
+						height={1041}
+						alt=''
+					/>
+				</div>
+
+				<div className={s.menu}>
+					<Image
+						src={menuIcon}
+						width={30}
+						height={25}
+						onClick={toggle}
+					/>
+				</div>
+				<div className={s.links}>
+					<Link href='/'>Hjem</Link>
+					<Link href='/profile'>About</Link>
+					<Link href='/prosjektet'>Prosjektet</Link>
+				</div>
 			</div>
 			{open ? <DropDownMenu className={s.dropDownMenu} /> : null}
-			<div className={s.menu}>
-				<Image
-					src={menuIcon}
-					width={30}
-					height={25}
-					onClick={toggle}
-				/>
-			</div>
-			<div className={s.links}>
-				<Link href='/'>Hjem</Link>
-				<Link href='/profile'>About</Link>
-				<Link href='/prosjektet'>Prosjektet</Link>
-			</div>
-		</div>
+		</>
 	)
 }

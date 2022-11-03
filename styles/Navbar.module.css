@@ -6,9 +6,9 @@
 	z-index: 10;
 	font-size: 0.4rem;
 	width: 100%;
-	height: auto;
 	padding: 0 1rem 1rem;
 	border-bottom: 1px solid black;
+	max-height: auto;
 	/* flex */
 	display: flex;
 	flex-direction: column;
@@ -49,7 +49,7 @@
 		flex-direction: row;
 		padding: 0%;
 		justify-content: space-around;
-		gap: 15rem;
+		gap: 10rem;
 	}
 	.links {
 		display: none;
@@ -62,11 +62,5 @@
 
 	.menu {
 		display: block;
-	}
-
-	.dropDownMenu {
-		height: 3rem;
-		width: 3rem;
-		z-index: 200;
 	}
 }
