@@ -3,7 +3,7 @@ import s from '../styles/DropDownMenu.module.css'
 
 const DropDownMenu = () => {
 	return (
-		<div className={s.container}>
+		<div  className={s.container}>
 			<ul>
 				<li>
 					<Link href='/'>Hjem</Link>
