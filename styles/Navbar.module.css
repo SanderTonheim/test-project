@@ -41,6 +41,9 @@
 	display: none;
 }
 
+.dropdown {
+	display: none;
+}
 @media only screen and (max-width: 425px) {
 	.navbar {
 		height: 100%;
@@ -62,5 +65,10 @@
 
 	.menu {
 		display: block;
+		height: fit-content;
+		width: fit-content;
+		z-index: 21;
 	}
+
+	
 }
