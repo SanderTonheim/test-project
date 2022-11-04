@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
 const ProfileList = ({ companys }) => {
 	return (
 		<div className={s.container}>
-			{<h1 className={s.header}>Medlemsliste</h1>}
+			<h1 className={s.header}>Medlemsliste</h1>
 			{/*
 			 -------------------------------------------------------------------------- 
 			 for each object in companys[] give this name 

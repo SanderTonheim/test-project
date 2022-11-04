@@ -4,7 +4,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 5rem 0;
-	/* --------------------------------- flex: ; -------------------------------- */
+
 	display: flex;
 	max-width: 100%;
 	justify-content: center;
@@ -24,7 +24,6 @@
 .content {
 	max-height: 100%;
 	max-width: 100%;
-	/* ---------------------------------- flex ---------------------------------- */
 	display: flex;
 	flex-direction: column;
 	padding: 2rem 1rem;
@@ -37,7 +36,6 @@
 .s1_content {
 	max-height: 100%;
 	max-width: 100%;
-	/* ---------------------------------- flex ---------------------------------- */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -67,26 +65,23 @@
 .s3_image {
 	min-width: 20rem;
 	max-width: 30rem;
-	/* ---------------------------------- flex ---------------------------------- */
 	display: flex;
 }
 
 .text {
 	color: rgb(60, 57, 57);
-	/* ---------------------------------- flex ---------------------------------- */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	gap: 1rem;
 }
-
-@media only screen and (min-width: 768px) {
+/* ---------------------------------- mobil --------------------------------- */
+@media only screen and (max-width: 425px) {
 	.section_1 {
-		height: 40rem;
+		height: 100vh;
 	}
 	.content {
 		display: flex;
-		flex-direction: row;
 	}
 	.section {
 		display: flex;
@@ -96,7 +91,6 @@
 
 	.header {
 		font-size: var(--h2);
-		/* ---------------------------------- flex ---------------------------------- */
 		padding: 1rem 0;
 		margin: 2rem 0;
 	}
@@ -104,13 +98,16 @@
 	.content {
 		max-width: 100%;
 		padding: 2rem 2rem;
+
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 	.section_3 .content {
 		display: flex;
 		max-width: 100%;
 		flex-direction: row-reverse;
+		justify-content: center;
 	}
 
 	.s3_image {
@@ -121,6 +118,6 @@
 		max-width: 20rem;
 	}
 	.text {
-		width: 50%;
+		width: 100%;
 	}
 }
