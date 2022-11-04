@@ -4,12 +4,25 @@ import s from '../styles/Navbar.module.css'
 import Logo from '../assets/logo.svg'
 import menuIcon from '../assets/menu-icon.png'
 import DropDownMenu from './DropDownMenu'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Navbar() {
 	/* ------------------------------- toggle menu ------------------------------ */
+	const refOne = useRef()
 
-	const [open, setOpen] = useState(false)
+	const handleClickOutSide = (e) => {
+		if (refOne.current.contains(e.target)) {
+			console.log('click inside')
+		} else {
+			console.log('click outside')
+			setOpen(false)
+		}
+	}
+
+	useEffect(() => {
+		document.addEventListener('click', handleClickOutSide)
+	}, [])
+	const [open, setOpen] = useState(true)
 
 	const toggle = () => {
 		{
@@ -28,7 +41,10 @@ export default function Navbar() {
 					/>
 				</div>
 
-				<div className={s.menu}>
+				<div
+					ref={refOne}
+					className={s.menu}
+				>
 					<Image
 						src={menuIcon}
 						width={30}
@@ -42,7 +58,7 @@ export default function Navbar() {
 					<Link href='/prosjektet'>Prosjektet</Link>
 				</div>
 			</div>
-			{open ? <DropDownMenu /> : ''}
+			<div className={s.ulContainer}>{open ? <DropDownMenu /> : ''}</div>
 		</>
 	)
 }
