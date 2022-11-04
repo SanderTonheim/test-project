@@ -4,33 +4,18 @@ import s from '../styles/Navbar.module.css'
 import Logo from '../assets/logo.svg'
 import menuIcon from '../assets/menu-icon.png'
 import DropDownMenu from './DropDownMenu'
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 
 export default function Navbar() {
 	/* ------------------------------- toggle menu ------------------------------ */
 
-	const [open, setOpen] = useState()
+	const [open, setOpen] = useState(false)
+
 	const toggle = () => {
 		{
 			setOpen(!open)
 		}
 	}
-	/* -------------------------------------------------------------------------- */
-
-	/* ----------------------- close when clicked out side ---------------------- */
-	const menuRef = useRef()
-
-	useEffect(() => {
-		const listener = (e) => {
-			if (!menuRef.current.contains(e.target)) {
-				setOpen(false)
-				console.log(menuRef)
-			}
-		}
-		// addEventListener('mousedown', listener)
-		removeEventListener('mousedown', listener)
-	})
-
 	return (
 		<>
 			<div className={s.navbar}>
@@ -57,9 +42,7 @@ export default function Navbar() {
 					<Link href='/prosjektet'>Prosjektet</Link>
 				</div>
 			</div>
-			<div ref={menuRef}>
-				{open ? <DropDownMenu className={s.dropDownMenu} /> : null}
-			</div>
+			{open ? <DropDownMenu /> : ''}
 		</>
 	)
 }
