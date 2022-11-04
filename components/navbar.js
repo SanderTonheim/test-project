@@ -22,7 +22,7 @@ export default function Navbar() {
 	useEffect(() => {
 		document.addEventListener('click', handleClickOutSide)
 	}, [])
-	const [open, setOpen] = useState(true)
+	const [open, setOpen] = useState(false)
 
 	const toggle = () => {
 		{
