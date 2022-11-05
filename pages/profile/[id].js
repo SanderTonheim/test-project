@@ -58,22 +58,16 @@ function Page({ data }) {
 							<p className={s.text}>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 								Perspiciatis, cum? Eum eius ut rerum repudiandae placeat
-								deleniti at incidunt, quam dignissimos, illum aspernatur et
-								tempora, expedita neque cupiditate facere nesciunt! Recusandae
-								mollitia doloremque fuga magni, hic ipsa neque ullam modi
-								maiores optio! Odio illo laudantium, provident veniam adipisci
-								enim ipsum recusandae eos exercitationem vero harum obcaecati
-								iusto asperiores ullam deleniti. Quia, cupiditate voluptas!
-								Laboriosam ab praesentium laborum vero accusantium eius
-								distinctio veniam sunt eaque tempora, aliquid eos ipsum quae
-								nostrum. Aliquam id voluptatem officia quae dicta numquam ipsam
-								velit libero. Possimus, at quasi? Ea a minus obcaecati sunt ab
-								perferendis? Aliquid laborum impedit tenetur quos aliquam modi
-								iusto commodi soluta saepe, voluptatem aspernatur reprehenderit
-								esse amet qui perspiciatis corporis? Dicta! oris quia voluptate
-								ratione aliquam odit debitis esse nesciunt molestiae vero
-								dolore, exercitationem architecto possimus ab facilis numquam
-								amet veniam distinctio nihil necessitatibus? Dolore, nostrum!
+								deleniti at incidunt, quam dignissimos, illum aspernatur et.
+								<br />
+								<br />
+								Quia, cupiditate voluptas! Laboriosam ab praesentium laborum
+								vero accusantium eius distinctio veniam sunt eaque tempora,
+								aliquid eos ipsum quae nostrum. Aliquam id voluptatem officia
+								quae dicta numquam ipsam velit libero. Possimus, at quasi? Ea a
+								minus obcaecati sunt ab perferendis? Aliquid laborum impedit
+								tenetur quos aliquam modi iusto commodi soluta saepe, voluptatem
+								aspernatur reprehenderit.
 							</p>
 						</div>
 					</section>
