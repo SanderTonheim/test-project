@@ -79,3 +79,19 @@
 		gap: 1rem;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.main {
+		flex-wrap: nowrap;
+		padding: 0 2rem;
+	}
+	.text_section p {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.owner_container {
+		max-height: 100%;
+	}
+}
