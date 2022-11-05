@@ -73,6 +73,9 @@
 	background-color: black;
 }
 
-@media screen {
-	
+/* --------------------------------- mobile --------------------------------- */
+@media screen and (max-width: 425px) {
+	.content {
+		gap: 1rem;
+	}
 }
