@@ -1,6 +1,7 @@
 import client from '../../client'
 import groq from 'groq'
 import s from '../../styles/slug.module.css'
+import Link from 'next/link'
 
 export async function getStaticPaths() {
 	const respon = await client.fetch(groq`*[_type == 'medlem']`)
@@ -31,25 +32,21 @@ export async function getStaticProps(context) {
 		},
 	}
 }
-// export async function getStaticProps({ params, preview }) {
-// 	const slug = { slug: params.slug }
-// 	const medlem = await getClient(preview).fetch(
-// 		'https://8rpris03.api.sanity.io/' + groq`*[_type == 'medlem']` + slug
-// 	)
-// 	const data = medlem.json()
-
-// 	return {
-// 		props: {
-// 			data,
-// 		},
-// 	}
-// }
 
 export default function ProfilePage({ post }) {
 	console.log(post)
+
 	return (
 		<div className={s.container}>
 			<h1>{post.name}</h1>
+			<p className={s.text}>{post.info}</p>
+			<ul className={s.contactInfo}>
+				<li>{post.phone}</li>
+				<li>{post.email}</li>
+				<Link href={post.website}>Nettside</Link>
+				<li>{post.address}</li>
+				<li>{post.zip}</li>
+			</ul>
 		</div>
 	)
 }
