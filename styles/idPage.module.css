@@ -1,8 +1,5 @@
 .container {
 	max-width: 100%;
-	min-height: fit-content;
-	height: 100%;
-	margin: 0%;
 	/* -------------------------------------------------------------------------- */
 	display: flex;
 	flex-direction: column;
@@ -19,7 +16,7 @@
 
 .header {
 	text-align: center;
-	padding: 1rem;
+	margin: 1rem;
 }
 .company_name {
 	font-size: 2.5rem;
@@ -35,63 +32,40 @@
 }
 
 .owner_container {
-	max-width: 20rem;
-	max-height: 100%;
 	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-}
-
-.owner_name > * {
-	text-align: center;
-	display: flex;
-	justify-content: center;
 	flex-direction: column;
 	gap: 1rem;
 }
-.text_section {
-	max-width: 100%;
-}
-.map_container {
-	width: 100%;
+
+.owner_name > * {
 	display: flex;
+	align-items: center;
 	flex-direction: column;
 	gap: 1rem;
 }
 
 .contact_info ul {
 	list-style-type: none;
+	text-decoration: underline;
 	padding: 0 1rem;
 	display: flex;
 	flex-direction: column;
-	gap: 0.4rem;
+	gap: 1rem;
 }
 
-#map {
-	height: 25rem;
-	width: 100%;
-	background-color: black;
-}
-
-/* --------------------------------- mobile --------------------------------- */
-@media screen and (max-width: 425px) {
-	.content {
-		gap: 1rem;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.main {
-		flex-wrap: nowrap;
-		padding: 0 2rem;
-	}
-	.text_section p {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
+@media screen and (min-width: 768px) and (max-width: 1440px) {
 	.owner_container {
-		max-height: 100%;
+		max-width: 20rem;
+	}
+	.main {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: space-between;
+		width: 70rem;
+	}
+
+	.main p {
+		max-width: 40rem;
 	}
 }

@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Home() {
 	return (
-		<main>
+		<main className={styles.mainContainer}>
 			<section className={styles.section_1}>
 				<div className={styles.s1_content}>
 					<h1 className={styles.s1_header}>Plant Land</h1>
