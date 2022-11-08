@@ -39,12 +39,16 @@ export default function ProfilePage({ post }) {
 	return (
 		<div className={s.container}>
 			<h1>{post.name}</h1>
-			<p className={s.text}>{post.info}</p>
+			<p className={s.text}>
+				Om oss <br />
+				<br />
+				{post.info}
+			</p>
 			<ul className={s.contactInfo}>
-				<li>{post.phone}</li>
-				<li>{post.email}</li>
+				<li>Telefon: {post.phone}</li>
+				<li>E-post: {post.email}</li>
 				<Link href={post.website}>Nettside</Link>
-				<li>{post.address}</li>
+				<li>Addresse: {post.address}</li>
 				<li>{post.zip}</li>
 			</ul>
 		</div>
