@@ -34,7 +34,10 @@ const ProfileList = ({ medlem }) => {
 							className={s.link}
 							href={
 								'/profile/' +
-								medlem.name.toLowerCase().replace(/\s+/g, '-').toString()
+								medlem.slug.current
+									// .toLowerCase()
+									// .replace(/\s+/g, '-')
+									.toString()
 							}
 						>
 							<img src={picture}></img>
