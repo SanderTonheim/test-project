@@ -1,37 +1,43 @@
 import Link from 'next/link'
 import s from '../../styles/profileIndex.module.css'
+import Image from 'next/image'
 
-/* --------------------------- Get data from API --------------------------- */
-export const getStaticProps = async () => {
-	const res = await fetch('https://jsonplaceholder.typicode.com/users')
-	const data = await res.json()
-	/* -------------------------------------------------------------------------- */
-	/*                        return object with name props                       */
-	/* -------------------------------------------------------------------------- */
+/* --------------------------------- sanity --------------------------------- */
+import { getClient } from '../../lib/sanity.server'
+import groq from 'groq'
+import { urlFor } from '../../lib/sanity'
+/* ------------------------------ sanity fetch ------------------------------ */
+export async function getStaticProps({ preview = false }) {
+	const medlem = await getClient(preview).fetch(groq`*[_type == 'medlem']`)
+
 	return {
-		props: { companys: data },
+		props: {
+			medlem,
+		},
 	}
 }
 
 /* ------------------------------------ Render items on page ----------------------------------- */
 
-const ProfileList = ({ companys }) => {
+const ProfileList = ({ medlem }) => {
+	console.log(medlem)
+
 	return (
 		<div className={s.container}>
 			<h1 className={s.header}>Medlemsliste</h1>
-			{/*
-			 -------------------------------------------------------------------------- 
-			 for each object in companys[] give this name 
-			--------------------------------------------------------------------------
-			*/}
-			{companys.map((company) => {
+
+			{medlem.map((medlem) => {
+				const picture = urlFor(medlem.logo.asset._ref)
+				console.log(picture)
+
 				return (
-					<div
-						key={company.id}
-						className={s.modal_container}
-					>
-						{/* address to page */}
-						<Link href={'/profile/' + company.id}>{company.name}</Link>
+					<div className={s.logo}>
+						<Link
+							className={s.link}
+							href={'/profile/' + medlem._id}
+						>
+							<img src={picture}></img>
+						</Link>
 					</div>
 				)
 			})}

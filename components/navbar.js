@@ -55,7 +55,6 @@ export default function Navbar() {
 				<div className={s.links}>
 					<Link href='/'>Hjem</Link>
 					<Link href='/profile'>About</Link>
-					<Link href='/prosjektet'>Prosjektet</Link>
 				</div>
 			</div>
 			<div className={s.ulContainer}>{open ? <DropDownMenu /> : ''}</div>

@@ -1,0 +1,11 @@
+{
+	"tileLayer": {
+		"attribution": "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors",
+		"url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+	},
+	"defaultLocation": {
+		"lat": 60.1852486409586,
+		"lng": 5.4707277701578185
+	},
+	"defaultZoom": 13
+}
