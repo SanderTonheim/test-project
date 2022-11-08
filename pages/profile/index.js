@@ -21,20 +21,21 @@ export async function getStaticProps({ preview = false }) {
 
 const ProfileList = ({ medlem }) => {
 	console.log(medlem)
-
 	return (
 		<div className={s.container}>
 			<h1 className={s.header}>Medlemsliste</h1>
 
 			{medlem.map((medlem) => {
 				const picture = urlFor(medlem.logo.asset._ref)
-				console.log(picture)
 
 				return (
 					<div className={s.logo}>
 						<Link
 							className={s.link}
-							href={'/profile/' + medlem._id}
+							href={
+								'/profile/' +
+								medlem.name.toLowerCase().replace(/\s+/g, '-').toString()
+							}
 						>
 							<img src={picture}></img>
 						</Link>

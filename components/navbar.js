@@ -12,9 +12,7 @@ export default function Navbar() {
 
 	const handleClickOutSide = (e) => {
 		if (refOne.current.contains(e.target)) {
-			console.log('click inside')
 		} else {
-			console.log('click outside')
 			setOpen(false)
 		}
 	}
