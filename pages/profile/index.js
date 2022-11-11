@@ -29,10 +29,12 @@ const ProfileList = ({ medlem }) => {
 				const picture = urlFor(medlem.logo.asset._ref)
 
 				return (
-					<div className={s.logo}>
+					<div
+						className={s.logo}
+						key={id}
+					>
 						<Link
 							className={s.link}
-							key={id}
 							href={
 								'/profile/' +
 								medlem.slug.current
