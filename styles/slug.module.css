@@ -14,3 +14,7 @@
 	gap: 1rem;
 	list-style-type: none;
 }
+
+#map {
+	height: 180px;
+}
