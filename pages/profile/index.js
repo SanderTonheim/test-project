@@ -32,7 +32,7 @@ const ProfileList = ({ medlem }) => {
 					<div className={s.logo}>
 						<Link
 							className={s.link}
-							key={medlem.slug.current}
+							key={id}
 							href={
 								'/profile/' +
 								medlem.slug.current
