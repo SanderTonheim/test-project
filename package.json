@@ -9,7 +9,6 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@react-google-maps/api": "^2.16.1",
 		"@sanity/client": "^3.4.1",
 		"@sanity/image-url": "^1.0.1",
 		"axios": "^1.1.3",
