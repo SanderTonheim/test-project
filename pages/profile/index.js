@@ -21,16 +21,16 @@ export async function getStaticProps({ preview = false }) {
 
 const ProfileList = ({ medlem }) => {
 	return (
-		<div
-			className={s.container}
-			key={medlem._id}
-		>
+		<div className={s.container}>
 			<h1 className={s.header}>Medlemsliste</h1>
 
 			{medlem.map((medlem) => {
 				const picture = urlFor(medlem.logo.asset._ref)
 				return (
-					<div className={s.logo}>
+					<div
+						className={s.logo}
+						key={medlem._id}
+					>
 						<Link
 							className={s.link}
 							href={
