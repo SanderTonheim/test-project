@@ -2,6 +2,7 @@ import client from '../../client'
 import groq from 'groq'
 import s from '../../styles/slug.module.css'
 import Link from 'next/link'
+import CompanyMap from '../../components/map'
 
 export async function getStaticPaths() {
 	const respon = await client.fetch(groq`*[_type == 'medlem']`)
@@ -51,6 +52,11 @@ export default function ProfilePage({ post }) {
 				<li>Addresse: {post.address}</li>
 				<li>{post.zip}</li>
 			</ul>
+			{/* <SimpleMap lat={post.location.lat} lng={post.location.lng}/> */}
+			<CompanyMap
+				lat={post.location.lat}
+				lng={post.location.lng}
+			/>
 		</div>
 	)
 }
