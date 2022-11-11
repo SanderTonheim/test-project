@@ -11,9 +11,6 @@ const DropDownMenu = () => {
 			<li>
 				<Link href='/profile'>profile</Link>
 			</li>
-			<li>
-				<Link href='/prosjektet'>prosjektet</Link>
-			</li>
 		</ul>
 	)
 }
