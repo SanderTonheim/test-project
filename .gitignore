@@ -4,8 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-/test-project-cms/node_modules/
-
+test-project-cms/node_modules
+test-project-cms
 # testing
 /coverage
 
@@ -35,3 +35,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+test-project-cms/
