@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.css'
 import s2_1 from '../assets/pic_s2_1.jpg'
 import image_s3 from '../assets/image_s3.jpg'
 import Image from 'next/image'
+import Search from '../components/search'
 
 export default function Home() {
 	return (
@@ -17,7 +18,10 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-
+			<section className={(styles.section, styles.search)}>
+				
+				<Search />
+			</section>
 			<section className={(styles.section, styles.section_2)}>
 				<h2 className={styles.header}>The hidden secrets</h2>
 				<div className={styles.content}>
