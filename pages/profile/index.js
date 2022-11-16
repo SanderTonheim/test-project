@@ -35,7 +35,10 @@ const ProfileList = ({ medlem }) => {
 							className={s.link}
 							href={'/profile/' + medlem.slug.current.toString()}
 						>
-							<img src={picture}></img>
+							<img
+								src={picture}
+								alt=''
+							/>
 						</Link>
 					</div>
 				)

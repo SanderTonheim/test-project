@@ -48,6 +48,7 @@ export default function Navbar() {
 						width={30}
 						height={25}
 						onClick={toggle}
+						alt=''
 					/>
 				</div>
 				<div className={s.links}>
