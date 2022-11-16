@@ -57,10 +57,11 @@ export default {
 			type: 'array',
 			of: [{ type: 'string' }],
 		},
+
 		{
+			title: 'Text',
 			name: 'text',
-			type: 'array',
-			title: 'Tekst',
+			type: 'string',
 			of: [{ type: 'block' }],
 		},
 

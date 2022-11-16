@@ -42,9 +42,7 @@ export default function ProfilePage({ post }) {
 			<p className={s.text}>
 				Om oss <br />
 				<br />
-				{post.text.map((item) => {
-					return <p>{item.children[0].text}</p>
-				})}
+				{post.text}
 			</p>
 
 			<ul className={s.contactInfo}>
