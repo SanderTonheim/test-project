@@ -13,10 +13,10 @@ export default function Search() {
 
 	const refOne = React.forwardRef(false)
 	const handleClickOutSide = (e) => {
-		if (e.targetn.value == '') {
+		if (!e.target.value === null) {
 			setOpen(false)
 		} else {
-			setOpen(true)
+			setOpen(!open)
 		}
 	}
 
