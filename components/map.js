@@ -4,7 +4,7 @@ import s from '../styles/map.module.css'
 export default function CompanyMap({ lat, lng }) {
 	const cord = { lat: lat, lng: lng }
 	const { isLoaded } = useJsApiLoader({
-		googleMapsApiKey: process.env.customKey,
+		googleMapsApiKey: 'AIzaSyD4UD_3-eGEmZOGaMtA5lgLbLBoU7VVegM',
 	})
 	if (!isLoaded) {
 		const errorMessage = 'Somethin went wrong'
