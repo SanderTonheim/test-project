@@ -58,11 +58,12 @@ export default {
 			of: [{ type: 'string' }],
 		},
 		{
-			title: 'Info',
-			name: 'info',
+			name: 'text',
 			type: 'array',
-			of: [{ type: 'string' }],
+			title: 'Tekst',
+			of: [{ type: 'block' }],
 		},
+
 		{
 			title: 'Slug',
 			name: 'slug',

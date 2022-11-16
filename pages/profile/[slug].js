@@ -35,14 +35,18 @@ export async function getStaticProps(context) {
 }
 
 export default function ProfilePage({ post }) {
+	console.log(post)
 	return (
 		<div className={s.container}>
 			<h1>{post.name}</h1>
 			<p className={s.text}>
 				Om oss <br />
 				<br />
-				{post.info}
+				{post.text.map((item) => {
+					return <p>{item.children[0].text}</p>
+				})}
 			</p>
+
 			<ul className={s.contactInfo}>
 				<li>Telefon: {post.phone}</li>
 				<li>E-post: {post.email}</li>

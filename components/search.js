@@ -9,10 +9,10 @@ const searchClient = algoliasearch(
 )
 const Hit = ({ hit }) => <p>{hit.name}</p>
 
-const [value, setValue] = useState('')
- const handleChange = event => {
-    setMessage(event.target.value);
-
+// const [value, setValue] = useState('')
+// const handleChange = (event) => {
+// 	setMessage(event.target.value)
+// }
 export default function Search() {
 	return (
 		<div className={s.container}>
