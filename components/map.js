@@ -8,7 +8,7 @@ export default function CompanyMap({ lat, lng }) {
 	})
 	if (!isLoaded) {
 		const errorMessage = 'Somethin went wrong'
-		return console.log(errorMessage)
+		return
 	}
 	console.log('Sucssess')
 

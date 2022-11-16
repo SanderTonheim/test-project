@@ -20,7 +20,6 @@ export async function getStaticProps({ preview = false }) {
 /* ------------------------------------ Render items on page ----------------------------------- */
 
 const ProfileList = ({ medlem }) => {
-	console.log(medlem)
 	return (
 		<div className={s.container}>
 			<h1 className={s.header}>Medlemsliste</h1>
