@@ -61,7 +61,7 @@ export default {
 		{
 			title: 'Text',
 			name: 'text',
-			type: 'string',
+			type: 'block',
 			of: [{ type: 'block' }],
 		},
 
