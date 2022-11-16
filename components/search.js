@@ -1,8 +1,6 @@
 import algoliasearch from 'algoliasearch'
 import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
 import s from '../styles/search.module.css'
-import { useRef, useEffect, useState } from 'react'
-import React from 'react'
 
 export default function Search() {
 	const searchClient = algoliasearch(
@@ -11,21 +9,6 @@ export default function Search() {
 	)
 	const Hit = ({ hit }) => <p>{hit.name}</p>
 
-	const refOne = React.forwardRef(false)
-	const handleClickOutSide = (e) => {
-		if (!e.target.value === null) {
-			setOpen(false)
-		} else {
-			setOpen(!open)
-		}
-	}
-
-	console.log(refOne)
-	useEffect(() => {
-		document.addEventListener('keypress', handleClickOutSide)
-	}, [])
-	const [open, setOpen] = useState(false)
-
 	return (
 		<div className={s.container}>
 			<InstantSearch
@@ -33,13 +16,11 @@ export default function Search() {
 				searchClient={searchClient}
 			>
 				<div className={s.search_hits}>
-					<SearchBox
-						ref={refOne}
-						className={s.input}
+					<SearchBox className={s.test} />
+					<Hits
+						hitComponent={Hit}
+						className={s.hits}
 					/>
-					<div className={s.hitContainer}>
-						{open && <Hits hitComponent={Hit} />}
-					</div>
 				</div>
 			</InstantSearch>
 		</div>
