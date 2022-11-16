@@ -7,7 +7,6 @@
 
 # Dependency directories
 node_modules
-/test-project-cms/node_modules/
 
 
 # Compiled sanity studio
