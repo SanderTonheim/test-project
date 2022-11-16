@@ -35,8 +35,6 @@ export async function getStaticProps(context) {
 }
 
 export default function ProfilePage({ post }) {
-	console.log(post)
-
 	return (
 		<div className={s.container}>
 			<h1>{post.name}</h1>

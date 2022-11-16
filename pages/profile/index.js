@@ -20,7 +20,6 @@ export async function getStaticProps({ preview = false }) {
 /* ------------------------------------ Render items on page ----------------------------------- */
 
 const ProfileList = ({ medlem }) => {
-	console.log(medlem)
 	return (
 		<div className={s.container}>
 			<h1 className={s.header}>Medlemsliste</h1>
@@ -34,13 +33,7 @@ const ProfileList = ({ medlem }) => {
 					>
 						<Link
 							className={s.link}
-							href={
-								'/profile/' +
-								medlem.slug.current
-									// .toLowerCase()
-									// .replace(/\s+/g, '-')
-									.toString()
-							}
+							href={'/profile/' + medlem.slug.current.toString()}
 						>
 							<img src={picture}></img>
 						</Link>

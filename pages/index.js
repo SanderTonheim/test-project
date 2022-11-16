@@ -19,7 +19,6 @@ export default function Home() {
 				</div>
 			</section>
 			<section className={(styles.section, styles.search)}>
-				
 				<Search />
 			</section>
 			<section className={(styles.section, styles.section_2)}>
