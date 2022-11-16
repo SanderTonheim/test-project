@@ -18,7 +18,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className={(styles.section, styles.search)}>
+			<section className={styles.search}>
 				<Search />
 			</section>
 			<section className={(styles.section, styles.section_2)}>

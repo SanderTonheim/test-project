@@ -16,7 +16,7 @@ export default function Search() {
 				searchClient={searchClient}
 			>
 				<div className={s.search_hits}>
-					<SearchBox className={s.test} />
+					<SearchBox className={s.test}  />
 					<Hits
 						hitComponent={Hit}
 						className={s.hits}
