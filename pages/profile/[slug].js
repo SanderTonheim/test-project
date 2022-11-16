@@ -41,7 +41,7 @@ export default function ProfilePage({ post }) {
 			<p className={s.text}>
 				Om oss <br />
 				<br />
-				{post.text}
+				<p>{post.text}</p>
 			</p>
 
 			<ul className={s.contactInfo}>
