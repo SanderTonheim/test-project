@@ -8,8 +8,8 @@ const Hit = ({ hit }) => <p>{hit.name}</p>
 
 export default function Search() {
 	const [value, setValue] = useState(null)
-	const handleChange = (event) => {
-		setValue(event.target.value)
+	const handleChange = (e) => {
+		setValue(e.target.value)
 	}
 	return (
 		<div className={s.container}>
