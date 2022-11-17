@@ -3,16 +3,12 @@ import s2_1 from '../assets/pic_s2_1.jpg'
 import image_s3 from '../assets/image_s3.jpg'
 import Image from 'next/image'
 import Search from '../components/search'
-import { Collapsible } from '../components/collapsible'
 
 export default function Home() {
 	return (
 		<main className={styles.mainContainer}>
 			<section className={styles.section_1}>
 				<div className={styles.s1_content}>
-					<Collapsible>
-						<h1>Dette er en test for å se om det funker</h1>
-					</Collapsible>
 					<h1 className={styles.s1_header}>Plant Land</h1>
 					<div className={styles.s1_text}>
 						<p>What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the universe.</p>
