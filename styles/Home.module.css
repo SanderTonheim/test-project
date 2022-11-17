@@ -61,12 +61,6 @@
 	color: rgb(60, 57, 57);
 }
 
-.search {
-	max-width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
 .s2_image {
 	max-width: 18rem;

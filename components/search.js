@@ -3,29 +3,32 @@ import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom'
 import s from '../styles/search.module.css'
 import { useState } from 'react'
 
-const searchClient = algoliasearch(
-	'BC0Z4HS7B1',
-	'efb4c3162db4848f35d83092db403111'
-)
+const searchClient = algoliasearch('BC0Z4HS7B1', 'efb4c3162db4848f35d83092db403111')
 const Hit = ({ hit }) => <p>{hit.name}</p>
 
-// const [value, setValue] = useState('')
-// const handleChange = (event) => {
-// 	setMessage(event.target.value)
-// }
 export default function Search() {
+	const [value, setValue] = useState(null)
+	const handleChange = (event) => {
+		setValue(event.target.value)
+	}
 	return (
 		<div className={s.container}>
 			<InstantSearch
 				indexName={'Medlem søk'}
-				searchClient={searchClient}
-			>
+				searchClient={searchClient}>
 				<div className={s.searchComponent}>
-					<SearchBox className={s.search} />
-					<Hits
-						hitComponent={Hit}
-						className={s.hit}
+					<SearchBox
+						className={s.search}
+						onChange={handleChange}
 					/>
+					{value > '' ? (
+						<Hits
+							hitComponent={Hit}
+							className={s.hit}
+						/>
+					) : (
+						''
+					)}
 				</div>
 			</InstantSearch>
 		</div>
