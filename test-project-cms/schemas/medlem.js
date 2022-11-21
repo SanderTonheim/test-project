@@ -1,10 +1,16 @@
 import LeafletGeopointInput from 'sanity-plugin-leaflet-input'
+import tag from './tag'
+import kontaktPerson from './kontaktPerson'
 
 export default {
 	name: 'medlem',
 	type: 'document',
 	title: 'Medlems bedrift',
 	fields: [
+		/* ------------------------------ experimental ------------------------------ */
+
+		/* --------------------------------- stabil --------------------------------- */
+
 		{
 			title: 'Navn',
 			name: 'name',
@@ -31,38 +37,26 @@ export default {
 			type: 'geopoint',
 			inputComponent: LeafletGeopointInput,
 		},
+
 		{
 			title: 'Kontakt person',
 			name: 'contactPerson',
-			type: 'string',
-		},
-		{
-			title: 'E-post',
-			name: 'email',
-			type: 'string',
-		},
-		{
-			title: 'Telefon',
-			name: 'phone',
-			type: 'number',
+			type: 'array',
+			of: [{ type: 'contactPerson' }],
+			options: {
+				layout: 'tags',
+			},
 		},
 		{
 			name: 'website',
 			title: 'Nettside',
 			type: 'url',
 		},
-		{
-			title: 'Tags',
-			name: 'tags',
-			type: 'array',
-			of: [{ type: 'string' }],
-		},
 
 		{
 			title: 'Text',
 			name: 'text',
-			type: 'block',
-			of: [{ type: 'block' }],
+			type: 'string',
 		},
 
 		{
