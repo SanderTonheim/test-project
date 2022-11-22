@@ -1,6 +1,4 @@
 import LeafletGeopointInput from 'sanity-plugin-leaflet-input'
-import tag from './tag'
-import kontaktPerson from './kontaktPerson'
 
 export default {
 	name: 'medlem',
@@ -8,7 +6,17 @@ export default {
 	title: 'Medlems bedrift',
 	fields: [
 		/* ------------------------------ experimental ------------------------------ */
-
+		{
+			title: 'Tag liste',
+			name: 'tags',
+			type: 'array',
+			of: [
+				{
+					type: 'reference',
+					to: { type: 'tag' },
+				},
+			],
+		},
 		/* --------------------------------- stabil --------------------------------- */
 
 		{
@@ -43,9 +51,6 @@ export default {
 			name: 'contactPerson',
 			type: 'array',
 			of: [{ type: 'contactPerson' }],
-			options: {
-				layout: 'tags',
-			},
 		},
 		{
 			name: 'website',

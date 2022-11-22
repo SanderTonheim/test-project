@@ -3,6 +3,7 @@ import groq from 'groq'
 import s from '../../styles/slug.module.css'
 import Link from 'next/link'
 import CompanyMap from '../../components/map'
+import { urlFor } from '../../lib/sanity'
 
 export async function getStaticPaths() {
 	const respon = await client.fetch(groq`*[_type == 'medlem']`)
@@ -23,7 +24,7 @@ export async function getStaticProps(context) {
 	const { slug = '' } = context.params
 	const post = await client.fetch(
 		`
-    *[_type == "medlem" && slug.current == $slug][0]
+    *[_type == "medlem" && slug.current == $slug][0] 
   `,
 		{ slug }
 	)
@@ -34,8 +35,15 @@ export async function getStaticProps(context) {
 	}
 }
 
-export default function ProfilePage({ post }) {
+export const image = async () => {
+	const tags = await client.fetch(groq`*[_type == "medlem"]{tags[]->}`)
+	return tags
+}
+
+export default function ProfilePage({ post, tags }) {
 	console.log(post)
+
+	console.log(tags)
 
 	return (
 		<div className={s.container}>
@@ -45,7 +53,6 @@ export default function ProfilePage({ post }) {
 				<br />
 				{post.text}
 			</p>
-
 			<ul className={s.contactInfo}>
 				<li>Telefon: {post.phone}</li>
 				<li>E-post: {post.email}</li>
