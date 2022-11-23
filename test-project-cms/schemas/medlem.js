@@ -4,6 +4,7 @@ export default {
 	name: 'medlem',
 	type: 'document',
 	title: 'Medlems bedrift',
+
 	fields: [
 		/* ------------------------------ experimental ------------------------------ */
 		{

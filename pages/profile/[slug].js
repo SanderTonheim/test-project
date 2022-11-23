@@ -1,12 +1,12 @@
-import client from '../../client'
-import groq from 'groq'
 import s from '../../styles/slug.module.css'
 import Link from 'next/link'
 import CompanyMap from '../../components/map'
+import { getClient } from '../../lib/sanity.server'
+import groq from 'groq'
 import { urlFor } from '../../lib/sanity'
 
 export async function getStaticPaths() {
-	const respon = await client.fetch(groq`*[_type == 'medlem']`)
+	const respon = await getClient().fetch(groq`*[_type == 'medlem']`)
 
 	const paths = respon.map((medlem) => {
 		return {
@@ -22,12 +22,13 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
 	// It's important to default the slug so that it doesn't return "undefined"
 	const { slug = '' } = context.params
-	const post = await client.fetch(
-		`
-    *[_type == "medlem" && slug.current == $slug][0] 
-  `,
+	const post = await getClient().fetch(
+		groq`
+	  *[_type == "medlem" && slug.current == $slug][0]
+	`,
 		{ slug }
 	)
+
 	return {
 		props: {
 			post,
@@ -35,24 +36,38 @@ export async function getStaticProps(context) {
 	}
 }
 
-export const image = async () => {
-	const tags = await client.fetch(groq`*[_type == "medlem"]{tags[]->}`)
-	return tags
-}
-
-export default function ProfilePage({ post, tags }) {
+export default function ProfilePage({ post }) {
+	// const tags = async function getTags() {
+	// 	const id = post._id
+	// 	const allTags = await getClient().fetch(groq`*[tags in path("${id}")]`)
+	// 	await console.log(allTags)
+	// }
+	const tags = async function getTags() {
+		const id = post._id
+		const allTags = await getClient().fetch(groq`*[_id == "${id}"].tags[]->`)
+		await console.log(allTags)
+	}
+	// console.log(post.tags)
+	// const picture = urlFor(post.tags[0].asset._ref)
+	// const showPic = picture.options.source
+	// console.log(tags);
+	tags()
 	console.log(post)
-
-	console.log(tags)
-
 	return (
 		<div className={s.container}>
 			<h1>{post.name}</h1>
+
 			<p className={s.text}>
 				Om oss <br />
 				<br />
 				{post.text}
 			</p>
+			{/* <div className={s.tags}>
+				<img
+					src={picture}
+					alt=''
+				/>
+			</div> */}
 			<ul className={s.contactInfo}>
 				<li>Telefon: {post.phone}</li>
 				<li>E-post: {post.email}</li>

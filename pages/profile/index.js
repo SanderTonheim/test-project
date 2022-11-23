@@ -20,6 +20,7 @@ export async function getStaticProps({ preview = false }) {
 /* ------------------------------------ Render items on page ----------------------------------- */
 
 const ProfileList = ({ medlem }) => {
+	console.log(medlem)
 	return (
 		<div className={s.container}>
 			<h1 className={s.header}>Medlemsliste</h1>
@@ -29,12 +30,10 @@ const ProfileList = ({ medlem }) => {
 				return (
 					<div
 						className={s.logo}
-						key={medlem._id}
-					>
+						key={medlem._id}>
 						<Link
 							className={s.link}
-							href={'/profile/' + medlem.slug.current.toString()}
-						>
+							href={'/profile/' + medlem.slug.current.toString()}>
 							<img
 								src={picture}
 								alt=''
