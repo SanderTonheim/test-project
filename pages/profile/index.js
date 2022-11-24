@@ -26,7 +26,7 @@ const ProfileList = ({ medlem }) => {
 			<h1 className={s.header}>Medlemsliste</h1>
 
 			{medlem.map((medlem) => {
-				const picture = urlFor(medlem.logo.asset._ref)
+				const picture = medlem.logo.asset._ref
 				return (
 					<div
 						className={s.logo}
@@ -35,7 +35,7 @@ const ProfileList = ({ medlem }) => {
 							className={s.link}
 							href={'/profile/' + medlem.slug.current.toString()}>
 							<img
-								src={picture}
+								src={urlFor(picture)}
 								alt=''
 							/>
 						</Link>
