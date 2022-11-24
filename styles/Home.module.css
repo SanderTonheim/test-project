@@ -74,9 +74,9 @@
 	background-color: whitesmoke;
 	width: 13.5rem;
 }
-.s2_image {
-	max-width: 18rem;
-}
+/* .s2_image {
+	max-width: 2rem;
+} */
 
 /* --------------------------------- tablet --------------------------------- */
 @media screen and (min-width: 425px) and (max-width: 768px) {
