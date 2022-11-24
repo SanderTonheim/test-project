@@ -10,7 +10,7 @@ export async function getStaticPaths() {
 
 	const paths = respon.map((medlem) => {
 		return {
-			params: { slug: medlem.slug.current },
+			params: { slug: medlem.slug.current, data: '' },
 		}
 	})
 	return {
@@ -24,8 +24,7 @@ export async function getStaticProps(context) {
 	const { slug = '' } = context.params
 	const post = await getClient().fetch(
 		groq`
-	  *[_type == "medlem" && slug.current == $slug][0]
-	`,
+	  *[_type == "medlem" && slug.current == $slug][0]{name,address,text,website,contactPerson, location, logo,zip,tags[]-> }`,
 		{ slug }
 	)
 
@@ -36,19 +35,15 @@ export async function getStaticProps(context) {
 	}
 }
 
-export default function ProfilePage({ post }, data) {
-	const tags = async function getTags() {
-		const id = post._id
-		const allTags = await getClient().fetch(groq`*[tags in path("${id}")]`)
-		await console.log(allTags)
-	}
+export default function ProfilePage({ post }) {
+	// const id = post._id
+	// const res = getClient()
+	// 	.fetch(groq`*[_type == "medlem" `)
+	// 	.then((result) => {
+	// 		return result
+	// 	})
 
-	console.log(post.tags)
-	const picture = post.tags.map((tag) => {
-		return urlFor(tag._ref)
-	})
-	// const picture = urlFor(post.tags[0].asset._ref)
-	// const showPic = picture.options.source
+	console.log(post)
 	return (
 		<div className={s.container}>
 			<h1>{post.name}</h1>
@@ -57,7 +52,6 @@ export default function ProfilePage({ post }, data) {
 				<br />
 				{post.text}
 			</p>
-			<img src={urlFor(picture).width(200).url()} />
 			{/* <div className={s.tags}>
 				<img
 					src={picture}
@@ -67,15 +61,15 @@ export default function ProfilePage({ post }, data) {
 			<ul className={s.contactInfo}>
 				<li>Telefon: {post.phone}</li>
 				<li>E-post: {post.email}</li>
-				<Link href={post.website}>Nettside</Link>
+				{/* <Link href={post.website}>Nettside</Link> */}
 				<li>Addresse: {post.address}</li>
 				<li>{post.zip}</li>
 			</ul>
 			{/* <SimpleMap lat={post.location.lat} lng={post.location.lng}/> */}
-			<CompanyMap
+			{/* <CompanyMap
 				lat={post.location.lat}
 				lng={post.location.lng}
-			/>
+			/> */}
 		</div>
 	)
 }
