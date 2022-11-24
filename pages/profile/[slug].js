@@ -36,32 +36,28 @@ export async function getStaticProps(context) {
 	}
 }
 
-export default function ProfilePage({ post }) {
-	// const tags = async function getTags() {
-	// 	const id = post._id
-	// 	const allTags = await getClient().fetch(groq`*[tags in path("${id}")]`)
-	// 	await console.log(allTags)
-	// }
+export default function ProfilePage({ post }, data) {
 	const tags = async function getTags() {
 		const id = post._id
-		const allTags = await getClient().fetch(groq`*[_id == "${id}"].tags[]->`)
+		const allTags = await getClient().fetch(groq`*[tags in path("${id}")]`)
 		await console.log(allTags)
 	}
-	// console.log(post.tags)
+
+	console.log(post.tags)
+	const picture = post.tags.map((tag) => {
+		return urlFor(tag._ref)
+	})
 	// const picture = urlFor(post.tags[0].asset._ref)
 	// const showPic = picture.options.source
-	// console.log(tags);
-	tags()
-	console.log(post)
 	return (
 		<div className={s.container}>
 			<h1>{post.name}</h1>
-
 			<p className={s.text}>
 				Om oss <br />
 				<br />
 				{post.text}
 			</p>
+			<img src={urlFor(picture).width(200).url()} />
 			{/* <div className={s.tags}>
 				<img
 					src={picture}
