@@ -26,6 +26,7 @@ export default function Home() {
 						<Image
 							src={s2_1}
 							alt='plant'
+							layout='responsive'
 						/>
 					</div>
 
@@ -48,6 +49,7 @@ export default function Home() {
 						<Image
 							src={image_s3}
 							alt='pla'
+							layout='responsive'
 						/>
 					</div>
 
