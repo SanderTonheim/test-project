@@ -20,11 +20,20 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-	// It's important to default the slug so that it doesn't return "undefined"
 	const { slug = '' } = context.params
 	const post = await getClient().fetch(
 		groq`
-	  *[_type == "medlem" && slug.current == $slug][0]{name,address,text,website,contactPerson, location, logo,zip,tags[]-> }`,
+	  *[_type == "medlem" && slug.current == $slug][0]{
+			name,
+			address,
+			text,
+			website,
+			contactPerson,
+			 location,
+			 logo,
+			zip,
+			tags[]->
+		}`,
 		{ slug }
 	)
 
@@ -36,13 +45,6 @@ export async function getStaticProps(context) {
 }
 
 export default function ProfilePage({ post }) {
-	// const id = post._id
-	// const res = getClient()
-	// 	.fetch(groq`*[_type == "medlem" `)
-	// 	.then((result) => {
-	// 		return result
-	// 	})
-
 	console.log(post)
 	return (
 		<div className={s.container}>
@@ -52,12 +54,20 @@ export default function ProfilePage({ post }) {
 				<br />
 				{post.text}
 			</p>
-			{/* <div className={s.tags}>
-				<img
-					src={picture}
+			<div className={s.tags}>
+				{post.tags < 1 ? (
+					''
+				) : (
+					<img
+						src={urlFor(post.tags[0].tag_Pic.asset._ref)}
+						alt=''
+					/>
+				)}
+				{/* <img
+					src={urlFor(post.tags[0].tag_Pic.asset._ref)}
 					alt=''
-				/>
-			</div> */}
+				/> */}
+			</div>
 			<ul className={s.contactInfo}>
 				<li>Telefon: {post.phone}</li>
 				<li>E-post: {post.email}</li>
