@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styles from '../styles/404.module.css'
 
+/* ------------------------------------ Render items on page ----------------------------------- */
 export default function PageNotFound() {
 	return (
 		<div className={styles.container}>

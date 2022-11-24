@@ -24,3 +24,17 @@
 .logo :hover {
 	cursor: pointer;
 }
+
+.search {
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.search ul {
+	list-style-type: none;
+	/* padding: 2rem 0; */
+	position: absolute;
+	background-color: whitesmoke;
+	width: 13.5rem;
+}

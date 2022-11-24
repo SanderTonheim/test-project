@@ -15,10 +15,6 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className={styles.search}>
-				<Search />
-			</section>
-
 			<section className={(styles.section, styles.section_2)}>
 				<h2 className={styles.header}>The hidden secrets</h2>
 				<div className={styles.content}>

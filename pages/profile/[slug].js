@@ -1,13 +1,14 @@
 import s from '../../styles/slug.module.css'
 import Link from 'next/link'
-import CompanyMap from '../../components/map'
+import Search from '../../components/search'
 import { getClient } from '../../lib/sanity.server'
 import groq from 'groq'
 import { urlFor } from '../../lib/sanity'
+import CompanyMap from '../../components/map'
 
-
+/* ------------------------------------ Render items on page ----------------------------------- */
 export default function ProfilePage({ post }) {
-	console.log(post)
+	console.log(post.tags)
 	return (
 		<div className={s.container}>
 			<h1>{post.name}</h1>
@@ -20,10 +21,13 @@ export default function ProfilePage({ post }) {
 				{post.tags < 1 ? (
 					''
 				) : (
-					<img
-						src={urlFor(post.tags[0].tag_Pic.asset._ref)}
-						alt=''
-					/>
+					<div>
+						<p>{post.tags[0].tag_Name}</p>
+
+						<img
+							src={urlFor(post.tags[0].tag_Pic.asset._ref)}
+							alt=''></img>
+					</div>
 				)}
 				{/* <img
 					src={urlFor(post.tags[0].tag_Pic.asset._ref)}
@@ -37,15 +41,15 @@ export default function ProfilePage({ post }) {
 				<li>Addresse: {post.address}</li>
 				<li>{post.zip}</li>
 			</ul>
-			{/* <SimpleMap lat={post.location.lat} lng={post.location.lng}/> */}
-			{/* <CompanyMap
+			<CompanyMap
 				lat={post.location.lat}
 				lng={post.location.lng}
-			/> */}
+			/>
 		</div>
 	)
 }
 
+/* ------------------------------------ Make pages based on number of  slugs ----------------------------------- */
 
 export async function getStaticPaths() {
 	const respon = await getClient().fetch(groq`*[_type == 'medlem']`)
@@ -61,6 +65,7 @@ export async function getStaticPaths() {
 	}
 }
 
+/* ------------------------------------ Get props for slug page ----------------------------------- */
 export async function getStaticProps(context) {
 	const { slug = '' } = context.params
 	const post = await getClient().fetch(
@@ -85,5 +90,3 @@ export async function getStaticProps(context) {
 		},
 	}
 }
-
-
