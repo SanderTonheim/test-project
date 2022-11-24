@@ -5,6 +5,7 @@ import { getClient } from '../../lib/sanity.server'
 import groq from 'groq'
 import { urlFor } from '../../lib/sanity'
 import CompanyMap from '../../components/map'
+import Tags from '../../components/TagList'
 
 /* ------------------------------------ Render items on page ----------------------------------- */
 export default function ProfilePage({ post }) {
@@ -17,23 +18,7 @@ export default function ProfilePage({ post }) {
 				<br />
 				{post.text}
 			</p>
-			<div className={s.tags}>
-				{post.tags < 1 ? (
-					''
-				) : (
-					<div>
-						<p>{post.tags[0].tag_Name}</p>
-
-						<img
-							src={urlFor(post.tags[0].tag_Pic.asset._ref)}
-							alt=''></img>
-					</div>
-				)}
-				{/* <img
-					src={urlFor(post.tags[0].tag_Pic.asset._ref)}
-					alt=''
-				/> */}
-			</div>
+			<div className={s.taglist}>Tags{post.tags < 1 ? '' : <Tags TagList={post.tags} />}</div>
 			<ul className={s.contactInfo}>
 				<li>Telefon: {post.phone}</li>
 				<li>E-post: {post.email}</li>
