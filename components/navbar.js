@@ -33,16 +33,14 @@ export default function Navbar() {
 				<div className={s.logo}>
 					<Image
 						src={Logo}
-						width={1600}
-						height={1041}
 						alt=''
+						layout='responsive'
 					/>
 				</div>
 
 				<div
 					ref={refOne}
-					className={s.menu}
-				>
+					className={s.menu}>
 					<Image
 						src={menuIcon}
 						width={30}
