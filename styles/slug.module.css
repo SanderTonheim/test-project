@@ -24,6 +24,6 @@
 	height: 180px;
 }
 
-.tags {
-	max-width: 1.5rem;
+.taglist {
+	max-width: 100%;
 }
