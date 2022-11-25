@@ -4,7 +4,9 @@ export default function Tags({ TagList }) {
 	console.log(TagList)
 	return TagList.map((tag) => {
 		return (
-			<div className={s.tag}>
+			<div
+				className={s.tag}
+				key={tag.name}>
 				<h3>{tag.tag_Name}</h3>
 				<img
 					src={urlFor(tag.tag_Pic.asset._ref)}
