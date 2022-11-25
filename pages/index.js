@@ -13,6 +13,9 @@ export default function Home() {
 					<div className={styles.s1_text}>
 						<p>What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the universe.</p>
 					</div>
+					<section className={styles.search}>
+						<Search />
+					</section>
 				</div>
 			</section>
 			<section className={(styles.section, styles.section_2)}>
