@@ -20,7 +20,7 @@ export default function ProfilePage({ post }) {
 				{post.text}
 			</p>
 			<div className={s.taglist}>Sertifiseringer{post.certifications < 1 ? '' : <Certifications list={post.certifications} />}</div>
-			<div className={s.taglist}>Tags{post.tagList < 1 ? '' : <Tags list={post.tagList} />}</div>
+			<div className={s.taglist}>Tags{post.tagList < 1 ? ' ' : <Tags list={post.tagList} />}</div>
 			<ul className={s.contactInfo}>
 				<li>Telefon: {post.phone}</li>
 				<li>E-post: {post.email}</li>
