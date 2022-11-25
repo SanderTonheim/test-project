@@ -5,7 +5,7 @@ export default function Certifications({ list }) {
 		return (
 			<div
 				className={s.tag}
-				key={name}>
+				key={item}>
 				<h4>{item}</h4>
 			</div>
 		)
