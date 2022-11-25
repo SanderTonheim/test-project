@@ -5,11 +5,12 @@ import { getClient } from '../../lib/sanity.server'
 import groq from 'groq'
 import { urlFor } from '../../lib/sanity'
 import CompanyMap from '../../components/map'
-import Tags from '../../components/TagList'
+import Certifications from '../../components/Certifications'
+import Tags from '../../components/Tags'
 
 /* ------------------------------------ Render items on page ----------------------------------- */
 export default function ProfilePage({ post }) {
-	console.log(post.tags)
+	console.log(post)
 	return (
 		<div className={s.container}>
 			<h1>{post.name}</h1>
@@ -18,7 +19,8 @@ export default function ProfilePage({ post }) {
 				<br />
 				{post.text}
 			</p>
-			<div className={s.taglist}>Tags{post.tags < 1 ? '' : <Tags TagList={post.tags} />}</div>
+			<div className={s.taglist}>Sertifiseringer{post.certifications < 1 ? '' : <Certifications list={post.certifications} />}</div>
+			<div className={s.taglist}>Tags{post.tagList < 1 ? '' : <Tags list={post.tagList} />}</div>
 			<ul className={s.contactInfo}>
 				<li>Telefon: {post.phone}</li>
 				<li>E-post: {post.email}</li>
@@ -61,10 +63,11 @@ export async function getStaticProps(context) {
 			text,
 			website,
 			contactPerson,
-			 location,
-			 logo,
+			location,
+			logo,
 			zip,
-			tags[]->
+			tagList,
+			certifications[]->
 		}`,
 		{ slug }
 	)
