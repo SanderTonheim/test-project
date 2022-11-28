@@ -3,8 +3,10 @@ import s2_1 from '../assets/pic_s2_1.jpg'
 import image_s3 from '../assets/image_s3.jpg'
 import Image from 'next/image'
 import Search from '../components/search'
+import groq from 'groq'
+import Sponsors from '../components/sponsors'
 
-export default function Home() {
+const Home = () => {
 	return (
 		<main className={styles.mainContainer}>
 			<section className={styles.section_1}>
@@ -13,11 +15,12 @@ export default function Home() {
 					<div className={styles.s1_text}>
 						<p>What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the universe.</p>
 					</div>
-					<section className={styles.search}>
-						<Search />
-					</section>
+					<section className={styles.search}>{/* <Search /> */}</section>
 				</div>
 			</section>
+			<div className={styles.cards}>
+				<Sponsors />
+			</div>
 			<section className={(styles.section, styles.section_2)}>
 				<h2 className={styles.header}>The hidden secrets</h2>
 				<div className={styles.content}>
@@ -65,3 +68,5 @@ export default function Home() {
 		</main>
 	)
 }
+
+export default Home

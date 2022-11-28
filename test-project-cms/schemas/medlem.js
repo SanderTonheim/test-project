@@ -56,6 +56,11 @@ export default {
 			type: 'string',
 		},
 		{
+			title: 'Hovedsamarbeidspartner?',
+			name: 'sponsor',
+			type: 'boolean',
+		},
+		{
 			title: 'Logo',
 			name: 'logo',
 			type: 'image',

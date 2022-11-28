@@ -1,0 +1,9 @@
+.card {
+	height: fit-content;
+	width: 20rem;
+	background-color: turquoise;
+	padding: 1rem 1rem;
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+}
