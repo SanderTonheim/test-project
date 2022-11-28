@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import s from '../styles/Navbar.module.css'
-import Logo from '../assets/logo.svg'
+import Logo from '../assets/bjornafjorden-naringrad_logo-300x97.png'
 import menuIcon from '../assets/menu-icon.png'
 import DropDownMenu from './DropDownMenu'
 import { useEffect, useRef, useState } from 'react'
@@ -34,7 +34,8 @@ export default function Navbar() {
 					<Image
 						src={Logo}
 						alt=''
-						layout='responsive'
+						height={40}
+						width={135}
 					/>
 				</div>
 
