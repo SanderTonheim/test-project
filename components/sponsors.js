@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import s from '../styles/sponsors.module.css'
+import urlFor from '../lib/sanity'
 
 export default function Sponsors() {
 	const [data, setData] = useState([])
@@ -17,13 +18,18 @@ export default function Sponsors() {
 
 	return (
 		<div>
-			{data.map((item) => {
+			{data?.map((item) => {
+				console.log(item)
 				return (
 					<div className={s.card}>
 						{item.name}
 						<br />
 						<br />
 						{item.text}
+						<img
+							src={urlFor(item.logo.asset._ref)}
+							alt=''
+						/>
 					</div>
 				)
 			})}
