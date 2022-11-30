@@ -1,9 +1,25 @@
 .card {
-	height: fit-content;
+	height: 20rem;
 	width: 20rem;
 	background-color: turquoise;
 	padding: 1rem 1rem;
 	display: flex;
-	flex-direction: row;
-	gap: 2rem;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	width: 10rem;
+}
+
+.tagContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.tags {
+	font-size: 0.6rem;
+	width: fit-content;
 }

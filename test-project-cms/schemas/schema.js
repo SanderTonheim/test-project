@@ -2,7 +2,7 @@
 import createSchema from 'part:@sanity/base/schema-creator'
 import medlem from './medlem'
 import certifications from './certifications'
-import kontaktPerson from './kontaktPerson'
+import contactPerson from './contactPerson'
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
@@ -16,6 +16,6 @@ export default createSchema({
 		/* Your types here! */
 		medlem,
 		certifications,
-		kontaktPerson,
+		contactPerson,
 	]),
 })

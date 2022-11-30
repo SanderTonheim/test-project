@@ -7,6 +7,7 @@ import { urlFor } from '../../lib/sanity'
 import CompanyMap from '../../components/map'
 import Certifications from '../../components/Certifications'
 import Tags from '../../components/Tags'
+import Contacts from '../../components/contactPerson'
 
 /* ------------------------------------ Render items on page ----------------------------------- */
 export default function ProfilePage({ post }) {
@@ -21,13 +22,8 @@ export default function ProfilePage({ post }) {
 			</p>
 			<div className={s.taglist}>Sertifiseringer{post.certifications < 1 ? '' : <Certifications list={post.certifications} />}</div>
 			<div className={s.taglist}>Tags{post.tagList < 1 ? ' ' : <Tags list={post.tagList} />}</div>
-			<ul className={s.contactInfo}>
-				<li>Telefon: {post.phone}</li>
-				<li>E-post: {post.email}</li>
-				{/* <Link href={post.website}>Nettside</Link> */}
-				<li>Addresse: {post.address}</li>
-				<li>{post.zip}</li>
-			</ul>
+			<div className={s.taglist}>Kontakter{post.contactPerson && <Contacts list={post.contactPerson} />}</div>
+
 			<CompanyMap
 				lat={post.location.lat}
 				lng={post.location.lng}

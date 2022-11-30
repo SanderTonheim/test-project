@@ -17,22 +17,24 @@ export default function Sponsors() {
 	}, [])
 
 	return (
-		<div>
-			{data?.map((item) => {
+		<>
+			{data.map((item) => {
 				console.log(item)
 				return (
 					<div className={s.card}>
-						{item.name}
-						<br />
-						<br />
-						{item.text}
 						<img
+							className={s.logo}
 							src={urlFor(item.logo.asset._ref)}
 							alt=''
 						/>
+						<div className={s.tagContainer}>
+							{item.tagList?.map((tag) => {
+								return <p className={s.tags}>{tag}</p>
+							})}
+						</div>
 					</div>
 				)
 			})}
-		</div>
+		</>
 	)
 }

@@ -7,10 +7,8 @@ export default function CompanyMap({ lat, lng }) {
 		googleMapsApiKey: 'AIzaSyD4UD_3-eGEmZOGaMtA5lgLbLBoU7VVegM',
 	})
 	if (!isLoaded) {
-		const errorMessage = 'Somethin went wrong'
-		return console.log(errorMessage)
+		return console.log()
 	}
-	console.log('Sucssess')
 
 	return (
 		<div className={s.map}>
@@ -23,8 +21,7 @@ export default function CompanyMap({ lat, lng }) {
 					mapTypeControl: false,
 					fullscreenControl: false,
 					streetViewControl: false,
-				}}
-			>
+				}}>
 				<Marker position={cord} />
 			</GoogleMap>
 		</div>

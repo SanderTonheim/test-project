@@ -86,7 +86,11 @@ export default {
 			title: 'Kontakt person',
 			name: 'contactPerson',
 			type: 'array',
-			of: [{ type: 'contactPerson' }],
+			of: [
+				{
+					type: 'contactPerson',
+				},
+			],
 		},
 		{
 			name: 'website',
