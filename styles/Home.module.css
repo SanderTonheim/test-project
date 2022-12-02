@@ -5,7 +5,7 @@
 
 .section_1 {
 	height: 20rem;
-	background-color: #5bc0cb;
+	background-color: #27a2ac;
 	width: 100%;
 	/* ---------------------------------- felx ---------------------------------- */
 	display: flex;
@@ -19,10 +19,14 @@
 	color: rgba(254, 254, 254, 0.985);
 }
 
-.serachBG {
-	width: 100%;
-	height: 100%;
-	background-color: black;
+.section_2 {
+	background-color: #5bc0cb;
+}
+.section_2 > h2 {
+	width: fit-content;
+	padding: 2rem 0;
+	margin: 0 auto;
+	font-size: 1.7rem;
 }
 
 .mainSponsors {
@@ -41,7 +45,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	margin: 5rem 0;
+	padding: 3rem 0;
 }
 
 .cards > * {
