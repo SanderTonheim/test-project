@@ -36,7 +36,7 @@
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-around;
-	margin: 3rem 0;
+	padding: 3rem 0;
 }
 
 .secondarySponsors {
