@@ -57,7 +57,12 @@ export default {
 		},
 		{
 			title: 'Hovedsamarbeidspartner?',
-			name: 'sponsor',
+			name: 'MainSponsor',
+			type: 'boolean',
+		},
+		{
+			title: 'Samarbeidspartner?',
+			name: 'SecondarySponsor',
 			type: 'boolean',
 		},
 		{

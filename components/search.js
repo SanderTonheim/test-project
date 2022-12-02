@@ -13,24 +13,32 @@ export default function Search() {
 	}
 
 	return (
-		<div className={s.container}>
+		<>
 			<InstantSearch
+				className={s.container}
 				indexName={'Medlem søk'}
 				searchClient={searchClient}>
-				<div className={s.searchComponent}>
-					<SearchBox
-						className={s.search}
-						onChange={handleChange}
+				<div
+					className={s.search}
+					onChange={handleChange}>
+					<input
+						type='text'
+						name=''
+						id=''
 					/>
+					<button id={s.searchBtn}>søk</button>
+
 					{value > '' ? (
-						<Hits
-							hitComponent={Hit}
-							className={s.hit}></Hits>
+						<>
+							<Hits
+								hitComponent={Hit}
+								className={s.hit}></Hits>
+						</>
 					) : (
 						''
 					)}
 				</div>
 			</InstantSearch>
-		</div>
+		</>
 	)
 }
