@@ -23,10 +23,9 @@ export default function Search() {
 					onChange={handleChange}>
 					<input
 						type='text'
-						name=''
-						id=''
+						placeholder='Søk'
 					/>
-					<button id={s.searchBtn}>søk</button>
+					{/* <button id={s.searchBtn}>søk</button> */}
 
 					{value > '' ? (
 						<>

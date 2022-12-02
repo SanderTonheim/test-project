@@ -7,7 +7,10 @@ const Home = () => {
 	return (
 		<main className={s.mainContainer}>
 			<section className={s.section_1}>
-				<Search />
+				<h1 className={s.header} >Næringsrådets Bedriftmedlemmer</h1>
+				<div className={s.searchBG}>
+					<Search />
+				</div>
 			</section>
 			<div className={s.mainSponsors}>
 				<Sponsors />

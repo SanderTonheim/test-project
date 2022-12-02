@@ -1,14 +1,25 @@
-.container {
-	background-color: #333;
-	width: 100%;
-}
-
 .search {
-	background-color: #333;
-	width: 10rem;
+	width: 100%;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
+.search input {
+	height: 3rem;
+	width: 60rem;
+	border-radius: 2rem;
+	font-style: none;
+	border-style: none;
+	padding: 0 1rem;
+	outline: none;
+	position: relative;
+}
+
+/* .search button {
+	position: absolute;
+	margin-left: 55rem;
+} */
 .search ul {
 	list-style-type: none;
 	/* padding: 2rem 0; */
