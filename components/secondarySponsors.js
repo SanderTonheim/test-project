@@ -19,9 +19,10 @@ export default function secondarySponsors() {
 	return (
 		<>
 			{data.map((item) => {
-				console.log(item)
 				return (
-					<div className={s.card}>
+					<div
+						className={s.card}
+						key={item.name}>
 						<img
 							className={s.logo}
 							src={urlFor(item.logo.asset._ref)}
