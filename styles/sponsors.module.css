@@ -1,10 +1,9 @@
 .card {
-	height: 20rem;
-	width: 20rem;
+	height: 15rem;
+	width: 30rem;
 	background-color: turquoise;
 	padding: 1rem 1rem;
 	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -13,13 +12,12 @@
 	width: 10rem;
 }
 
-.tagContainer {
-	width: 100%;
+.certifications {
 	display: flex;
-	flex-direction: column;
+	gap: 0.5rem;
+	height: 100%;
 	align-items: flex-end;
 }
-.tags {
-	font-size: 0.6rem;
-	width: fit-content;
+.certifications > img {
+	height: 1.2rem;
 }
