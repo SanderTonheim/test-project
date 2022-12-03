@@ -8,15 +8,11 @@
 	gap: 1rem;
 }
 
-.container p,
-.container ul {
-	margin: 1rem 0;
+.tags li {
+	list-style-type: none;
 }
 
-.contactInfo {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
+.contactPerson li {
 	list-style-type: none;
 }
 
