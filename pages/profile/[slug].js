@@ -1,4 +1,3 @@
-import s from '../../styles/slug.module.css'
 import Link from 'next/link'
 import Search from '../../components/search'
 import { getClient } from '../../lib/sanity.server'
@@ -8,6 +7,7 @@ import CompanyMap from '../../components/map'
 import Certifications from '../../components/Certifications'
 import Tags from '../../components/Tags'
 import Contacts from '../../components/contactPerson'
+import s from '../../styles/slug.module.css'
 
 /* ------------------------------------ Render items on page ----------------------------------- */
 export default function ProfilePage({ post }) {
@@ -20,9 +20,11 @@ export default function ProfilePage({ post }) {
 				<br />
 				{post.text}
 			</p>
-			<div className={s.taglist}>Sertifiseringer{post.certifications < 1 ? '' : <Certifications list={post.certifications} />}</div>
-			<div className={s.taglist}>Tags{post.tagList < 1 ? ' ' : <Tags list={post.tagList} />}</div>
-			<div className={s.taglist}>Kontakter{post.contactPerson && <Contacts list={post.contactPerson} />}</div>
+			<div className={s.certifications}>{post.certifications < 1 ? '' : <Certifications list={post.certifications} />}</div>
+
+			<div className={s.tags}>{post.tags < 1 ? ' ' : <Tags list={post.tags} />}</div>
+
+			<div className={s.contactPerson}>{post.contactPerson && <Contacts list={post.contactPerson} />}</div>
 
 			<CompanyMap
 				lat={post.location.lat}
@@ -62,7 +64,7 @@ export async function getStaticProps(context) {
 			location,
 			logo,
 			zip,
-			tagList,
+			tags[]->,
 			certifications[]->
 		}`,
 		{ slug }
