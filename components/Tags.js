@@ -1,12 +1,13 @@
-import s from '../styles/TagList.module.css'
-export default function Certifications({ list }) {
-	return list.map((item) => {
+import urlFor from '../lib/sanity'
+
+export default function Tags({ list }) {
+	return list.map((tag) => {
+		console.log()
 		return (
-			<div
-				className={s.tag}
-				key={item}>
-				<h4>{item}</h4>
-			</div>
+			<ul>
+				<li>{tag.tagList}</li>
+				<div>{urlFor(tag.tagIcon.asset._ref)}</div>
+			</ul>
 		)
 	})
 }
