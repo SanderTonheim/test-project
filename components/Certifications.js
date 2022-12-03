@@ -1,5 +1,5 @@
 import urlFor from '../lib/sanity'
-import s from '../styles/TagList.module.css'
+// import s from '../styles/TagList.module.css'
 export default function Certifications({ list }) {
 	return list.map((item) => {
 		return (
