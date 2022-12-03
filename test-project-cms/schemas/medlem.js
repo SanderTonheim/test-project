@@ -37,23 +37,18 @@ export default {
 				],
 			},
 		},
-		{
-			title: 'Sertifiseringer',
-			name: 'certifications',
-			type: 'array',
-			of: [
-				{
-					type: 'reference',
-					to: { type: 'certifications' },
-				},
-			],
-		},
+
 		/* --------------------------------- stabil --------------------------------- */
 
 		{
 			title: 'Navn',
 			name: 'name',
 			type: 'string',
+		},
+		{
+			title: 'Logo',
+			name: 'logo',
+			type: 'image',
 		},
 		{
 			title: 'Hovedsamarbeidspartner?',
@@ -66,9 +61,15 @@ export default {
 			type: 'boolean',
 		},
 		{
-			title: 'Logo',
-			name: 'logo',
-			type: 'image',
+			title: 'Sertifiseringer',
+			name: 'certifications',
+			type: 'array',
+			of: [
+				{
+					type: 'reference',
+					to: { type: 'certifications' },
+				},
+			],
 		},
 		{
 			title: 'Adresse',
