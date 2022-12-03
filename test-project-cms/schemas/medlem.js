@@ -7,37 +7,18 @@ export default {
 
 	fields: [
 		/* ------------------------------ experimental ------------------------------ */
+		
 		{
-			title: 'Tag liste',
-			name: 'tagList',
+			title: 'Tags',
+			name: 'tags',
 			type: 'array',
-			of: [{ type: 'string' }],
-			fieldsets: [{ name: 'Tags' }],
-			options: {
-				editmodal: 'fullscreen',
-				list: [
-					{ title: 'Bygg & Anlegg', value: 'Bygg & Anlegg' },
-					{ title: 'Økonomi & Investering', value: 'Finans & Investering' },
-					{ title: 'Havbruk', value: 'Havbruk' },
-					{ title: 'Handel & Service', value: 'Handel & Service' },
-					{ title: 'IKT', value: 'IKT' },
-					{ title: 'Media & Kommunikasjon', value: 'ServMedia & Kommunikasjonice' },
-					{ title: 'Olje & Gass', value: 'Olje & Gass' },
-					{ title: 'Reiseliv', value: 'Reiseliv' },
-					{ title: 'Rådgivning', value: 'Rådgivning' },
-					{ title: 'Infrastruktur & Eiendom', value: 'Infrastruktur & Eiendom' },
-					{ title: 'Offentlig', value: 'Offentlig' },
-					{ title: 'Kultur', value: 'Kultur' },
-					{ title: 'Kunst & Håndverk', value: 'Kunst & Håndverk' },
-					{ title: 'Maritim', value: 'Maritim' },
-					{ title: 'Matproduksjon', value: 'Matproduksjon' },
-					{ title: 'Transport', value: 'Transport' },
-					{ title: 'Utdanning', value: 'Utdanning' },
-					{ title: 'Industri', value: 'Industri' },
-				],
-			},
+			of: [
+				{
+					type: 'reference',
+					to: { type: 'tags' },
+				},
+			],
 		},
-
 		/* --------------------------------- stabil --------------------------------- */
 
 		{
