@@ -4,7 +4,9 @@ import s from '../styles/tags.module.css'
 export default function Tags({ list }) {
 	return list.map((tag) => {
 		return (
-			<div className={s.container}>
+			<div
+				className={s.container}
+				key={tag._id}>
 				{tag.Name}
 				<img
 					key={tag.name}
