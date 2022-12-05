@@ -1,7 +1,7 @@
 export default function ContactPerson({ list }) {
 	return (
 		<>
-			{list.map((item) => {
+			{list?.map((item) => {
 				return (
 					<ul key={item._key}>
 						<li>{item.department}</li>

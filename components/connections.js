@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Connections({ list }) {
 	return (
 		<>
-			{list.map((item) => {
+			{list?.map((item) => {
 				return (
 					<div
 						className={s.groups}
