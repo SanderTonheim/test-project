@@ -1,6 +1,8 @@
+import Link from 'next/link'
 import Search from '../../components/search'
 import { getClient } from '../../lib/sanity.server'
 import groq from 'groq'
+import { urlFor } from '../../lib/sanity'
 import CompanyMap from '../../components/map'
 import Certifications from '../../components/Certifications'
 import Tags from '../../components/Tags'
@@ -55,7 +57,14 @@ export async function getStaticProps(context) {
 	const { slug = '' } = context.params
 	const post = await getClient().fetch(
 		groq`
-	  *[_type == "medlem" && slug.current == $slug][0]`,
+	  *[_type == "medlem" && slug.current == $slug][0]{
+  name, 
+  _id,
+  logo,
+	location,
+  certifications[]->,
+	connections[]->
+}`,
 		{ slug }
 	)
 
