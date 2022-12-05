@@ -7,10 +7,9 @@ export default {
 
 	fields: [
 		/* ------------------------------ experimental ------------------------------ */
-		
 		{
 			title: 'Tags',
-			name: 'tags',
+			name: 'tag',
 			type: 'array',
 			of: [
 				{
