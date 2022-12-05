@@ -19,7 +19,6 @@ export default function SecondarySponsors() {
 	return (
 		<>
 			{data.map((item) => {
-				console.log(item._id)
 				return (
 					<div
 						className={s.card}
@@ -31,7 +30,14 @@ export default function SecondarySponsors() {
 						/>
 						<div className={s.tagContainer}>
 							{item.tagList?.map((tag) => {
-								return <p className={s.tags}>{tag}</p>
+								console.log(tag)
+								return (
+									<p
+										key={tag.name}
+										className={s.tags}>
+										{tag}
+									</p>
+								)
 							})}
 						</div>
 					</div>
