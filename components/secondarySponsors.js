@@ -19,6 +19,7 @@ export default function SecondarySponsors() {
 	return (
 		<>
 			{data.map((item) => {
+				console.log(item._id)
 				return (
 					<div
 						className={s.card}
