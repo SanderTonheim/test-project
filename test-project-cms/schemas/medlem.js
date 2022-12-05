@@ -8,13 +8,13 @@ export default {
 	fields: [
 		/* ------------------------------ experimental ------------------------------ */
 		{
-			title: 'Tags',
-			name: 'tag',
+			title: 'Tilknyttninger',
+			name: 'connections',
 			type: 'array',
 			of: [
 				{
 					type: 'reference',
-					to: { type: 'tags' },
+					to: { type: 'connections' },
 				},
 			],
 		},
@@ -39,6 +39,17 @@ export default {
 			title: 'Samarbeidspartner?',
 			name: 'SecondarySponsor',
 			type: 'boolean',
+		},
+		{
+			title: 'Tags',
+			name: 'tag',
+			type: 'array',
+			of: [
+				{
+					type: 'reference',
+					to: { type: 'tags' },
+				},
+			],
 		},
 		{
 			title: 'Sertifiseringer',

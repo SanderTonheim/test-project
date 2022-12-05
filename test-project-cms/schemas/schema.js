@@ -6,6 +6,7 @@ import contactPerson from './contactPerson'
 // Then import schema types from any plugins that might expose them
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 import tags from './tags'
+import connections from './connections'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -19,5 +20,6 @@ export default createSchema({
 		certifications,
 		contactPerson,
 		tags,
+		connections,
 	]),
 })
