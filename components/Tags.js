@@ -1,7 +1,7 @@
 import urlFor from '../lib/sanity'
 
 export default function Tags({ list }) {
-	return list.map((tag) => {
+	return list?.map((tag) => {
 		console.log(tag)
 		return (
 			<ul key={tag._key}>

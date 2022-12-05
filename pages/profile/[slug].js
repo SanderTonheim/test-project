@@ -1,8 +1,6 @@
-import Link from 'next/link'
 import Search from '../../components/search'
 import { getClient } from '../../lib/sanity.server'
 import groq from 'groq'
-import { urlFor } from '../../lib/sanity'
 import CompanyMap from '../../components/map'
 import Certifications from '../../components/Certifications'
 import Tags from '../../components/Tags'
