@@ -12,6 +12,7 @@ import Connections from '../../components/connections'
 
 /* ------------------------------------ Render items on page ----------------------------------- */
 export default function ProfilePage({ post }) {
+	console.log(post)
 	return (
 		<div className={s.container}>
 			<h1>{post.name}</h1>
@@ -56,19 +57,7 @@ export async function getStaticProps(context) {
 	const { slug = '' } = context.params
 	const post = await getClient().fetch(
 		groq`
-	  *[_type == "medlem" && slug.current == $slug][0]{
-			name,
-			address,
-			text,
-			website,
-			contactPerson,
-			location,
-			logo,
-			zip,
-			tags[]->,
-			certifications[]->,
-			connections[]->{name, 'icon': icon.asset->url}
-		}`,
+	  *[_type == "medlem" && slug.current == $slug][0]`,
 		{ slug }
 	)
 
