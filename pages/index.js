@@ -1,7 +1,6 @@
 import s from '../styles/Home.module.css'
 import Search from '../components/search'
 import SecondarySponsors from '../components/secondarySponsors'
-import Sponsors from '../components/mainSponsors'
 import MainSponsors from '../components/mainSponsors'
 
 const Home = () => {
