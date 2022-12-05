@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import s from '../styles/Navbar.module.css'
-import Logo from '../assets/bjornafjorden-naringrad_logo-300x97.png'
 import menuIcon from '../assets/menu-icon.png'
 import DropDownMenu from './DropDownMenu'
+import logo from '../assets/logo.png'
 import { useEffect, useRef, useState } from 'react'
 
 export default function Navbar() {
@@ -30,15 +30,11 @@ export default function Navbar() {
 	return (
 		<>
 			<div className={s.navbar}>
-				<div className={s.logo}>
-					<Image
-						src={Logo}
-						alt=''
-						height={40}
-						width={135}
-					/>
-				</div>
-
+				<Image
+					src={logo}
+					width={150}
+					height={50}
+				/>
 				<div
 					ref={refOne}
 					className={s.menu}>
