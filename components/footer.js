@@ -32,7 +32,6 @@ export default function Footer() {
 			<h1>VÅRE SAMARBEIDSPARTNERE</h1>
 			<div className={s.logos}>
 				{mainSponsorsLogo.map((item) => {
-					console.log(item)
 					return (
 						<img
 							key={item.src}

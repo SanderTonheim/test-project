@@ -23,3 +23,12 @@
 .taglist {
 	max-width: 100%;
 }
+
+.groups {
+	display: flex;
+	flex-direction: column;
+}
+
+.groups img {
+	max-width: 4.5rem;
+}

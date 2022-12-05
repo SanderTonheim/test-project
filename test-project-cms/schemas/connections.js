@@ -5,8 +5,8 @@ export default {
 
 	fields: [
 		{
-			name: 'Name',
-			title: 'name',
+			name: 'name',
+			title: 'Navn',
 			type: 'string',
 		},
 		{

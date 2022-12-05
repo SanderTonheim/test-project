@@ -8,10 +8,10 @@ import Certifications from '../../components/Certifications'
 import Tags from '../../components/Tags'
 import Contacts from '../../components/contactPerson'
 import s from '../../styles/slug.module.css'
+import Connections from '../../components/connections'
 
 /* ------------------------------------ Render items on page ----------------------------------- */
 export default function ProfilePage({ post }) {
-	console.log(post)
 	return (
 		<div className={s.container}>
 			<h1>{post.name}</h1>
@@ -25,6 +25,7 @@ export default function ProfilePage({ post }) {
 			<div className={s.tags}>{post.tags < 1 ? ' ' : <Tags list={post.tags} />}</div>
 
 			<div className={s.contactPerson}>{post.contactPerson && <Contacts list={post.contactPerson} />}</div>
+			<div className={s.connections}>{post.connections && <Connections list={post.connections} />}</div>
 
 			<CompanyMap
 				lat={post.location.lat}
@@ -41,7 +42,7 @@ export async function getStaticPaths() {
 
 	const paths = respon.map((medlem) => {
 		return {
-			params: { slug: medlem.slug.current, data: '' },
+			params: { slug: medlem.slug.current },
 		}
 	})
 	return {
@@ -65,7 +66,8 @@ export async function getStaticProps(context) {
 			logo,
 			zip,
 			tags[]->,
-			certifications[]->
+			certifications[]->,
+			connections[]->{name, 'icon': icon.asset->url}
 		}`,
 		{ slug }
 	)
