@@ -7,6 +7,7 @@ export default function Tags({ list }) {
 			<div className={s.container}>
 				{tag.Name}
 				<img
+					key={tag.name}
 					src={urlFor(tag.icon.asset._ref)}
 					alt='tags'
 				/>
