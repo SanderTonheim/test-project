@@ -3,7 +3,7 @@ export default function ContactPerson({ list }) {
 		<>
 			{list.map((item) => {
 				return (
-					<ul>
+					<ul key={item._key}>
 						<li>{item.department}</li>
 						<li>{item.name}</li>
 						<li>{item.mail}</li>

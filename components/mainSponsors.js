@@ -24,7 +24,7 @@ export default function mainSponsors() {
 				return (
 					<div
 						className={s.card}
-						key={item.name}>
+						key={item._id}>
 						<img
 							className={s.logo}
 							src={urlFor(item.logo.asset._ref)}

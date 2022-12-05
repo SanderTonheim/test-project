@@ -5,9 +5,10 @@ export default function Connections({ list }) {
 	return (
 		<>
 			{list.map((item) => {
-				console.log(item.icon)
 				return (
-					<div className={s.groups}>
+					<div
+						className={s.groups}
+						key={item.name}>
 						<h4>Grupper</h4>
 						<img src={item.icon} />
 					</div>
