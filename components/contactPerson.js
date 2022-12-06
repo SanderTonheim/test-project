@@ -1,13 +1,13 @@
 export default function ContactPerson({ list }) {
 	return (
 		<>
-			{list?.map((item) => {
+			{list.map((item) => {
 				return (
 					<ul key={item._key}>
-						<li>{item.department}</li>
-						<li>{item.name}</li>
-						<li>{item.mail}</li>
-						<li>{item.phone}</li>
+						{item.department.length > 1 ? <li>{item.department}</li> : ''}
+						{item.name > 0 ? <li>{item.name}</li> : ''}
+						{item.mail.length > 0 ? <li>{item.mail}</li> : ''}
+						{item.phone > 0 ? <li>{item.phone}</li> : ''}
 					</ul>
 				)
 			})}
