@@ -2,42 +2,34 @@
 	height: 100%;
 	max-width: 70rem;
 	margin: 2rem auto;
-	display: flex;
-
-	justify-content: space-between;
 }
 
 .section_1 {
 	max-width: 100%;
+	max-height: fit-content;
 	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.section_1 img,
+.text {
 	flex-basis: 50%;
 }
 
+.section_1 img {
+	max-width: 25rem;
+}
+
 .section_2 {
-	max-width: 100%;
+	max-width: 80%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 4rem;
+}
+.contacts {
 	display: flex;
 	flex-direction: column;
-}
-
-.map {
-	max-width: 70rem;
-	margin: 0 auto;
-}
-.logo {
-	max-width: 15rem;
-}
-
-.contactPerson li {
-	list-style-type: none;
-}
-
-.groups {
-	display: flex;
-	flex-direction: column;
-}
-
-.groups img {
-	max-width: 4.5rem;
+	gap: 2rem;
 }

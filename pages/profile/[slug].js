@@ -13,33 +13,34 @@ import Connections from '../../components/connections'
 /* ------------------------------------ Render items on page ----------------------------------- */
 export default function ProfilePage({ post }) {
 	const logo = urlFor(post.logo.asset._ref)
+	console.log(post)
 	return (
 		<>
 			<div className={s.container}>
+				<h1>{post.name}</h1>
 				<div className={s.section_1}>
-					<h1>{post.name}</h1>
-
 					<p className={s.text}>{post.text}</p>
-					{post.tag < 1 ? ' ' : <Tags list={post.tag} />}
-				</div>
-				<div className={s.section_2}>
 					<img
 						className={s.logo}
 						src={logo}
-						alt='logo'
+						alt='Logo'
 					/>
-					{post.certifications < 1 ? '' : <Certifications list={post.certifications} />}
-
-					{post.contactPerson && <Contacts list={post.contactPerson} />}
-					{post.connections && <Connections list={post.connections} />}
 				</div>
+				<div className={s.section_2}>
+					<div>
+						{post.tag < 1 ? ' ' : <Tags list={post.tag} />}
+						{post.certifications < 1 ? '' : <Certifications list={post.certifications} />}
+					</div>
+					<div className={s.contacts}>{post.contactPerson && <Contacts list={post.contactPerson} />}</div>
+				</div>
+				{post.connections && <Connections list={post.connections} />}
 			</div>
-			<div className={s.map}>
+			{/* <div className={s.map}>
 				<CompanyMap
 					lat={post.location.lat}
 					lng={post.location.lng}
 				/>
-			</div>
+			</div> */}
 		</>
 	)
 }
@@ -74,6 +75,7 @@ export async function getStaticProps(context) {
 	connections[]->,
 	text,
 	tag[]->,
+	contactPerson,
 }`,
 		{ slug }
 	)

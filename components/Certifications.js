@@ -3,7 +3,7 @@ import urlFor from '../lib/sanity'
 export default function Certifications({ list }) {
 	return list.map((item) => {
 		return (
-			<div
+			<li
 				key={item.name}
 				className={s.container}>
 				{item.name}
@@ -11,7 +11,7 @@ export default function Certifications({ list }) {
 					src={urlFor(item.icon.asset._ref)}
 					alt='icon'
 				/>
-			</div>
+			</li>
 		)
 	})
 }

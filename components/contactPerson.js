@@ -1,9 +1,12 @@
+import s from '../styles/ContactPerson.module.css'
 export default function ContactPerson({ list }) {
 	return (
 		<>
 			{list.map((item) => {
 				return (
-					<ul key={item._key}>
+					<ul
+						key={item._key}
+						className={s.container}>
 						{item.department.length > 1 ? <li>{item.department}</li> : ''}
 						{item.name > 0 ? <li>{item.name}</li> : ''}
 						{item.mail.length > 0 ? <li>{item.mail}</li> : ''}
