@@ -31,7 +31,15 @@ export default function ProfilePage({ post }) {
 						{post.tag < 1 ? ' ' : <Tags list={post.tag} />}
 						{post.certifications < 1 ? '' : <Certifications list={post.certifications} />}
 					</div>
-					<div className={s.contacts}>{post.contactPerson && <Contacts list={post.contactPerson} />}</div>
+					<div className={s.contacts}>
+						{post.contactPerson && (
+							<Contacts
+								list={post.contactPerson}
+								website={post.website}
+								address={post.address}
+							/>
+						)}
+					</div>
 				</div>
 				{post.connections && <Connections list={post.connections} />}
 			</div>
@@ -76,6 +84,9 @@ export async function getStaticProps(context) {
 	text,
 	tag[]->,
 	contactPerson,
+	website,
+	address,
+	zip
 }`,
 		{ slug }
 	)
