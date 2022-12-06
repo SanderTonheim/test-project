@@ -35,7 +35,7 @@ export default function ContactPerson({ list, website, address }) {
 						) : (
 							''
 						)}
-						{contact.mail.length > 0 ? (
+						{contact.mail?.length > 0 ? (
 							<div className={s.mail}>
 								<img
 									className={s.icon}
