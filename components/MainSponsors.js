@@ -35,7 +35,9 @@ export default function MainSponsors() {
 							<div className={s.tagList}>
 								{item.tag?.map((tag) => {
 									return (
-										<div className={s.tag}>
+										<div
+											className={s.tag}
+											key={tag.name}>
 											{tag.name}
 											<img
 												src={urlFor(tag.icon)}
