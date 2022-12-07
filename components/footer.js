@@ -10,6 +10,7 @@ export default function Footer() {
 	const mainSponsorsLogo = [azets, ecit, framo, spv, sands]
 	return (
 		<div className={s.footer}>
+			<h2>Meld deg på vårt nyhetsbrev</h2>
 			<div className={s.newsLetter}>
 				<input
 					type='text'

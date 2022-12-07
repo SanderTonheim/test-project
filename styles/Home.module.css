@@ -5,14 +5,14 @@
 
 .section_1 {
 	height: 10rem;
-	background-color: #27a2ac;
+	background-color: #5bc0cb;
 	max-width: 100%;
 	/* ---------------------------------- felx ---------------------------------- */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	padding: 1rem 0;
+	padding: 1rem;
 }
 
 .header {
@@ -20,7 +20,7 @@
 }
 
 .section_2 {
-	background-color: #5bc0cb;
+	background-color: #27a2ac;
 }
 
 .section_2 > h2 {
@@ -39,10 +39,6 @@
 
 /* --------------------------------- tablet --------------------------------- */
 @media screen and (min-width: 425px) and (max-width: 768px) {
-	.section_1 {
-		height: 100vh;
-	}
-
 	.content {
 		display: flex;
 		flex-direction: column;
