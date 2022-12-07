@@ -3,7 +3,7 @@ import Link from 'next/link'
 import s from '../styles/Navbar.module.css'
 import menuIcon from '../assets/menu-icon.png'
 import DropDownMenu from './DropDownMenu'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.svg'
 import { useEffect, useRef, useState } from 'react'
 
 export default function Navbar() {
