@@ -1,23 +1,45 @@
 .card {
-	height: 15rem;
-	width: 30rem;
-	background-color: turquoise;
-	padding: 1rem 1rem;
+	min-height: 15rem;
+	/* max-height: fit-content; */
+	/* background-color: turquoise; */
+	margin: 1rem 2rem;
+	padding: 1rem 2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-direction: column;
+	border: solid black 1px;
+	gap: 2rem;
+	background-color: rgba(255, 255, 255, 0.273);
 }
 
 .logo {
-	width: 10rem;
+	max-width: 6rem;
 }
 
+.bottomBox {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5rem;
+}
 .certifications {
 	display: flex;
-	gap: 0.5rem;
-	height: 100%;
-	align-items: flex-end;
+	flex-direction: column;
 }
 .certifications > img {
 	height: 1.2rem;
+}
+
+.tag {
+	display: flex;
+	align-items: center;
+	width: fit-content;
+	flex-direction: row-reverse;
+	gap: .5rem;
+}
+
+.tag img {
+	width: 1rem;
 }
