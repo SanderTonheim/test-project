@@ -5,13 +5,9 @@
 	max-height: 3rem;
 	background-color: #5bc0cb;
 	z-index: 10;
-	font-size: 0.4rem;
-	padding: 0 1rem 1rem;
-	max-height: fit-content;
 	border-bottom: 1px solid rgb(116, 113, 113);
 	/* flex */
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 }
 
@@ -50,14 +46,14 @@
 		flex-direction: row;
 		padding: 0%;
 		justify-content: space-around;
-		gap: 10rem;
+		/* gap: 10rem; */
 	}
 	.links {
 		display: none;
 	}
 
 	.menu {
-		display: block;
+		display: inline;
 	}
 	.ulContainer {
 		z-index: 1;
@@ -93,6 +89,7 @@
 		align-items: center;
 		justify-content: center;
 		padding: 0 6rem;
+		max-width: 100%;
 	}
 	.links {
 		justify-content: flex-end;

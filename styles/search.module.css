@@ -1,5 +1,5 @@
 .search {
-	width: 100%;
+	max-width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -7,7 +7,7 @@
 
 .search input {
 	height: 3rem;
-	width: 60rem;
+	max-width: 60rem;
 	border-radius: 2rem;
 	font-style: none;
 	border-style: none;
