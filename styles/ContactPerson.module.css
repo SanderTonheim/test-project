@@ -25,3 +25,6 @@
 	margin-bottom: 6rem;
 }
 
+.website a:any-link {
+	color: black;
+}

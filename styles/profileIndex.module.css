@@ -14,14 +14,26 @@
 	color: whitesmoke;
 }
 
-.logo {
-	width: 15rem;
+.company {
+	gap: 1rem;
+	width: 10rem;
+	align-items: center;
+	justify-content: flex-end;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
-.logo img {
-	height: 5rem;
+.company a:any-link {
+	color: white;
+	text-decoration: none;
 }
 
-.logo :hover {
+.company img {
+	width: 2rem;
+}
+
+.company :hover {
 	cursor: pointer;
 }
 

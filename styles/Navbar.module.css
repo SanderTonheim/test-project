@@ -7,6 +7,7 @@
 	z-index: 10;
 	max-height: fit-content;
 	padding: 1rem;
+
 	/* flex */
 	display: flex;
 	justify-content: space-between;
@@ -15,10 +16,6 @@
 
 .links {
 	display: none;
-}
-
-.menu {
-	display: inline;
 }
 
 @media only screen and (min-width: 768px) {

@@ -1,13 +1,17 @@
 import Link from 'next/link'
 import s from '../../styles/profileIndex.module.css'
 import Search from '../../components/search'
+import icons from '../../assets/icons/index'
 /* --------------------------------- sanity --------------------------------- */
 import { getClient } from '../../lib/sanity.server'
 import groq from 'groq'
-import urlFor from '../../lib/sanity'
 /* ------------------------------------ Render items on page ----------------------------------- */
 const ProfileList = ({ medlem }) => {
-	console.log(medlem)
+	const isMainSponsor = medlem.filter((mainSponsors) => {
+		return mainSponsors
+	})
+	console.log(isMainSponsor)
+
 	return (
 		<div className={s.container}>
 			<h1 className={s.header}>Medlemsliste</h1>
@@ -15,19 +19,19 @@ const ProfileList = ({ medlem }) => {
 				<Search />
 			</section>
 			{medlem.map((medlem) => {
-				const picture = medlem.logo.asset._ref
 				return (
 					<div
-						className={s.logo}
+						className={s.company}
 						key={medlem._id}>
 						<Link
 							className={s.link}
 							href={'/profile/' + medlem.slug.current.toString()}>
-							<img
-								src={urlFor(picture)}
-								alt=''
-							/>
+							{medlem.name}
 						</Link>
+						<img
+							src={icons.member.src}
+							alt=''
+						/>
 					</div>
 				)
 			})}
@@ -35,6 +39,7 @@ const ProfileList = ({ medlem }) => {
 	)
 }
 export default ProfileList
+
 /* ------------------------------ sanity fetch ------------------------------ */
 export async function getStaticProps({ preview = false }) {
 	const medlem = await getClient(preview).fetch(groq`*[_type == 'medlem']`)

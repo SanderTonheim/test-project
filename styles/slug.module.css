@@ -1,34 +1,37 @@
 .container {
-	max-width: 60rem;
+	max-width: 100%;
+	margin: 1rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	margin: 3rem auto;
+}
+
+.container h1 {
+	margin: 0 auto;
 }
 
 .section_1 {
 	max-width: 100%;
 	max-height: fit-content;
 	display: flex;
+	flex-direction: column-reverse;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 2rem;
-}
-
-.section_1 img,
-.text {
-	flex-basis: 50%;
+	margin: 2rem 1rem;
+	gap: 3rem;
 }
 
 .section_1 img {
-	max-width: 25rem;
+	max-width: 10rem;
 }
 
 .section_2 {
 	display: flex;
+	max-width: fit-content;
 	justify-content: space-between;
-	align-items: center;
-	margin-top: 4rem;
+	align-items: flex-start;
+	flex-direction: column;
+	margin: 1rem auto;
+	gap: 1rem;
 }
 .contacts {
 	display: flex;

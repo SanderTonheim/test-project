@@ -4,14 +4,14 @@ import s from '../styles/DropDownMenu.module.css'
 
 const DropDownMenu = () => {
 	return (
-		<ul>
+		<div className={s.container}>
 			<li>
 				<Link href='/'>Hjem</Link>
 			</li>
 			<li>
 				<Link href='/profile'>profile</Link>
 			</li>
-		</ul>
+		</div>
 	)
 }
 

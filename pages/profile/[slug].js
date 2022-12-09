@@ -30,6 +30,7 @@ export default function ProfilePage({ post }) {
 					<div>
 						{post.tag < 1 ? ' ' : <Tags list={post.tag} />}
 						{post.certifications < 1 ? '' : <Certifications list={post.certifications} />}
+						{post.connections && <Connections list={post.connections} />}
 					</div>
 					<div className={s.contacts}>
 						{post.contactPerson && (
@@ -41,14 +42,13 @@ export default function ProfilePage({ post }) {
 						)}
 					</div>
 				</div>
-				{post.connections && <Connections list={post.connections} />}
 			</div>
-			{/* <div className={s.map}>
+			<div className={s.map}>
 				<CompanyMap
 					lat={post.location.lat}
 					lng={post.location.lng}
 				/>
-			</div> */}
+			</div>
 		</>
 	)
 }

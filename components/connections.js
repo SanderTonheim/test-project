@@ -8,7 +8,6 @@ export default function Connections({ list }) {
 					<div
 						className={s.groups}
 						key={item.name}>
-						<h4>Grupper</h4>
 						<img
 							src={urlFor(item.icon.asset._ref)}
 							alt='icon'

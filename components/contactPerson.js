@@ -1,5 +1,6 @@
 import s from '../styles/ContactPerson.module.css'
 import icon from '../assets/icons/index'
+import Link from 'next/link'
 
 export default function ContactPerson({ list, website, address }) {
 	return (
@@ -63,20 +64,18 @@ export default function ContactPerson({ list, website, address }) {
 					</ul>
 				)
 			})}
-			<div className={s.otherContactInfo}>
-				{website.length > 0 ? (
-					<div className={s.website}>
-						<img
-							className={s.icon}
-							src={icon.website.src}
-							alt='websiteIcon'
-						/>
-						{website}
-					</div>
-				) : (
-					''
-				)}
-			</div>
+			{website.length > 0 ? (
+				<div className={s.website}>
+					<img
+						className={s.icon}
+						src={icon.website.src}
+						alt='websiteIcon'
+					/>
+					<Link href={website}> {website}</Link>
+				</div>
+			) : (
+				''
+			)}
 		</>
 	)
 }
