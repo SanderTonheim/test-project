@@ -90,39 +90,8 @@
 	}
 }
 
-@media (1440px <= width <= 2560px) {
-	.s1_content {
-		height: 30rem;
-	}
-
-	.header {
-		font-size: 3rem;
-	}
-
-	.s2_image {
-		max-width: 15rem;
-	}
-
-	.content {
-		flex-direction: row;
-		max-width: 100%;
-		margin: 0 auto;
-		gap: 10vw;
-	}
-
-	.s3_image {
-		max-width: 20rem;
-	}
-
-	.text {
-		max-width: 40rem;
-	}
-	.mainContainer section {
-		margin: 0 auto;
-	}
-
-	.section_3 .content {
-		display: flex;
-		flex-direction: row-reverse;
+@media screen and (min-width: 600px) {
+	.card {
+		
 	}
 }
