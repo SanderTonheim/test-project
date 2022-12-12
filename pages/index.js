@@ -13,7 +13,7 @@ const Home = () => {
 				</div>
 			</section>
 			<section className={s.section_2}>
-				<h2>nikolai er kul</h2>
+				<h2>Våre sammarbeidspartenere</h2>
 				<div className={s.mainSponsors}>
 					<MainSponsors />
 				</div>

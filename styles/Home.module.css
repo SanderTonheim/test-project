@@ -90,8 +90,7 @@
 	}
 }
 
-@media screen and (min-width: 600px) {
+@media screen, (min-width: 600px), (max-width: 768px) {
 	.card {
-		
 	}
 }
