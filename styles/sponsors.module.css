@@ -1,7 +1,5 @@
 .card {
 	min-height: 15rem;
-	/* max-height: fit-content; */
-	/* background-color: turquoise; */
 	margin: 1rem 2rem;
 	padding: 1rem 2rem;
 	display: flex;
@@ -41,4 +39,39 @@
 
 .tag img {
 	width: 1rem;
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+	.logo {
+		max-width: 8rem;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	.container {
+		max-width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.card {
+		flex-basis: 40%;
+	}
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+	.container {
+		max-width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.card {
+		flex-basis: 25%;
+		flex-grow: 1;
+	}
+	.text {
+		height: 100%;
+	}
 }

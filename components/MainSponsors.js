@@ -18,7 +18,7 @@ export default function MainSponsors() {
 	}, [])
 
 	return (
-		<>
+		<div className={s.container}>
 			{data.map((item) => {
 				console.log(item)
 				return (
@@ -30,7 +30,7 @@ export default function MainSponsors() {
 							src={urlFor(item.logo.asset._ref)}
 							alt=''
 						/>
-						{item.text}
+						<div className={s.text}>{item.text}</div>
 						<div className={s.bottomBox}>
 							<div className={s.tagList}>
 								{item.tag?.map((tag) => {
@@ -63,6 +63,6 @@ export default function MainSponsors() {
 					</div>
 				)
 			})}
-		</>
+		</div>
 	)
 }

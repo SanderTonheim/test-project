@@ -14,16 +14,10 @@ const Home = () => {
 			</section>
 			<section className={s.section_2}>
 				<h2>Våre sammarbeidspartenere</h2>
-				<div className={s.mainSponsors}>
-					<MainSponsors />
-				</div>
-				<div className={s.secondarySponsors}>
-					<SecondarySponsors />
-				</div>
+				<MainSponsors />
 			</section>
 		</main>
 	)
 }
 
-// Våre sammarbeidspartenere
 export default Home
