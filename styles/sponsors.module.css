@@ -60,11 +60,12 @@
 	}
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) {
 	.container {
-		max-width: 100%;
+		max-width: 1200px;
 		display: flex;
 		flex-wrap: wrap;
+		margin: 0 auto;
 	}
 
 	.card {
