@@ -8,6 +8,12 @@ export default {
 	fields: [
 		/* ------------------------------ experimental ------------------------------ */
 		{
+			title: 'Tekst på sponsorkort',
+			name: 'sponsorCardText',
+			type: 'string',
+		},
+
+		{
 			title: 'Tilknyttninger',
 			name: 'connections',
 			type: 'array',
