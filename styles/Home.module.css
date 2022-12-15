@@ -27,6 +27,9 @@
 	padding: 2rem;
 	color: white;
 }
+.arrow {
+	width: 3rem;
+}
 
 /* --------------------------------- tablet --------------------------------- */
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -36,5 +39,10 @@
 	}
 }
 /* --------------------------------- Desktop -------------------------------- */
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media screen and (min-width: 769px) {
+	.section_2 > h2 {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
 }

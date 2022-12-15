@@ -1,7 +1,9 @@
 import s from '../styles/Home.module.css'
 import Search from '../components/search'
-import SecondarySponsors from '../components/secondarySponsors'
 import MainSponsors from '../components/MainSponsors'
+import arrow from '../assets/arraow.svg'
+import Image from 'next/image'
+import { Autocomplete } from '@react-google-maps/api'
 
 const Home = () => {
 	return (
@@ -12,6 +14,12 @@ const Home = () => {
 					<Search />
 				</div>
 			</section>
+			<div className={s.arraow}>
+				<Image
+					src={arrow}
+					height='auto'
+				/>
+			</div>
 			<section className={s.section_2}>
 				<h2>Våre sammarbeidspartenere</h2>
 				<MainSponsors />
