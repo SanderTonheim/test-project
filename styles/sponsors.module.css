@@ -14,40 +14,8 @@
 	padding-bottom: 1rem;
 }
 
-.text {
-	height: 100%;
-	margin: 1rem 0;
-}
-
 .logo {
 	max-width: 10rem;
-}
-
-.bottomBox {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 0.5rem;
-}
-.certifications {
-	display: flex;
-	flex-direction: column;
-}
-.certifications > img {
-	height: 1.2rem;
-}
-
-.tag {
-	display: flex;
-	align-items: center;
-	width: fit-content;
-	flex-direction: row-reverse;
-	gap: 0.5rem;
-}
-
-.tag img {
-	width: 1rem;
 }
 
 .membersButton button {
@@ -61,6 +29,10 @@
 	color: whitesmoke;
 	font-weight: 600;
 	font-size: 1rem;
+}
+
+.button {
+	text-decoration: none;
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
