@@ -14,13 +14,14 @@ const Home = () => {
 					<Search />
 				</div>
 			</section>
-			<div className={s.arraow}>
-				<Image
-					src={arrow}
-					height='auto'
-				/>
-			</div>
+
 			<section className={s.section_2}>
+				<div className={s.arrow}>
+					<Image
+						src={arrow}
+						width={100}
+					/>
+				</div>
 				<h2>Våre sammarbeidspartenere</h2>
 				<MainSponsors />
 			</section>
