@@ -5,15 +5,10 @@
 }
 :root {
 	--font: Montserrat;
-	--font-size: 1rem;
-	--h1: 4rem;
-	--h2: 2.5rem;
 }
 * {
-	box-sizing: border-box;
 	padding: 0%;
 	margin: 0%;
-	/* max-width: 100%; */
 }
 
 html,
@@ -25,5 +20,4 @@ div#__next {
 div#__next {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 }
