@@ -51,6 +51,20 @@
 	top: -0.03rem;
 }
 
+.sponsorHeading {
+	color: white;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 28.75rem;
+	justify-content: space-between;
+	padding: 0 2rem;
+}
+
+.sponsorHeading img {
+	max-width: 4rem;
+}
+
 /* --------------------------------- tablet --------------------------------- */
 @media screen and (min-width: 480px) and (max-width: 768px) {
 	.section_2 {
@@ -59,10 +73,5 @@
 	}
 }
 /* --------------------------------- Desktop -------------------------------- */
-@media screen and (min-width: 769px) {
-	.section_2 > h2 {
-		max-width: 100%;
-		display: flex;
-		justify-content: center;
-	}
+@media screen and (min-width: 769px) and (max-width: 1440px) {
 }
