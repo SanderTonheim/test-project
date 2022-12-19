@@ -51,7 +51,7 @@ export default function Navbar() {
 					<Link href='/profile'>About</Link>
 				</div>
 			</div>
-			<div className={s.dropDownMenu}>{open ? <DropDownMenu /> : ''}</div>
+			<divs className={s.dropDownMenu}>{open ? <DropDownMenu /> : null}</divs>
 		</>
 	)
 }
