@@ -5,6 +5,8 @@ import arrow from '../assets/arrow.svg'
 import Image from 'next/image'
 import { Autocomplete } from '@react-google-maps/api'
 import figure from '../assets/frontPageFigure.png'
+import SecondarySponsors from '../components/SecondarySponsors'
+import icons from '../assets/icons'
 
 const Home = () => {
 	return (
@@ -27,8 +29,26 @@ const Home = () => {
 						width={100}
 					/>
 				</div>
-				<h2>Våre sammarbeidspartenere</h2>
-				<MainSponsors />
+				<div className={s.sponsorHeading}>
+					<h2>Våre hovudsamarbeidspartnare</h2>
+					<img
+						src={icons.mainSponsor.src}
+						alt='Main Sponsors'
+					/>
+				</div>
+				<div>
+					<MainSponsors />
+				</div>
+				<div className={s.sponsorHeading}>
+					<h2>Våre samarbeidspartnare</h2>
+					<img
+						src={icons.secondarySponsor.src}
+						alt='Main Sponsors'
+					/>
+				</div>
+				<div>
+					<SecondarySponsors />
+				</div>
 			</section>
 		</main>
 	)
