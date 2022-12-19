@@ -9,6 +9,7 @@ import Tags from '../../components/Tags'
 import Contacts from '../../components/contactPerson'
 import s from '../../styles/slug.module.css'
 import Connections from '../../components/connections'
+import icons from '../../assets/icons/index'
 
 /* ------------------------------------ Render items on page ----------------------------------- */
 export default function ProfilePage({ post }) {
@@ -17,7 +18,10 @@ export default function ProfilePage({ post }) {
 	return (
 		<>
 			<div className={s.container}>
-				<h1>{post.name}</h1>
+				<h1>
+					<img src={icons.member.src} />
+					{post.name}
+				</h1>
 				<div className={s.section_1}>
 					<p className={s.text}>{post.text}</p>
 					<img

@@ -7,6 +7,12 @@
 
 .container h1 {
 	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container h1 img {
+	display: none;
 }
 
 .section_1 {
@@ -41,4 +47,41 @@
 
 .contacts > ul > h3 {
 	margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+	.section_1 {
+		flex-direction: row;
+		align-items: flex-start;
+		margin: 2rem 3rem;
+	}
+
+	.container h1 {
+		max-width: 100%;
+		margin: 2rem 3rem;
+		display: flex;
+		justify-content: flex-start;
+		gap: 1rem;
+		font-weight: 500;
+	}
+	.container h1 img {
+		display: block;
+		max-height: 2rem;
+	}
+	.section_1 p {
+		flex-basis: 50%;
+		font-size: 0.9rem;
+	}
+	.section_1 img {
+		max-width: 12rem;
+		flex-basis: 50%;
+	}
+
+	.section_2 {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		max-width: 100%;
+		margin: 2rem 3rem;
+	}
 }
