@@ -5,6 +5,8 @@ import website from '../icons/websiteIcon.svg'
 import name from '../icons/nameIcon.svg'
 import company from '../icons/company.svg'
 import member from '../icons/memberIcon.svg'
+import mainSponsor from '../icons/MainSponsor.png'
+import secondarySponsor from '../icons/SecondarySponsor.png'
 const Icon = {
 	phone,
 	mail,
@@ -13,6 +15,8 @@ const Icon = {
 	name,
 	company,
 	member,
+	mainSponsor,
+	secondarySponsor,
 }
 
 export default Icon
