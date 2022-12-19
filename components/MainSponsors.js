@@ -38,13 +38,6 @@ export default function MainSponsors() {
 					)
 				})}
 			</div>
-			<div className={s.membersButton}>
-				<Link
-					className={s.button}
-					href={'/profile'}>
-					<button>Se alle medlemer</button>
-				</Link>
-			</div>
 		</>
 	)
 }
