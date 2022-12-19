@@ -57,8 +57,9 @@
 	align-items: center;
 	margin: 0 auto;
 	max-width: 28.75rem;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	padding: 0 2rem;
+	flex-wrap: wrap;
 }
 
 .sponsorHeading img {
