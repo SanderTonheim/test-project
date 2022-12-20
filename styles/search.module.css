@@ -3,6 +3,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border: solid 2px #3f9094;
+	margin: 0 1rem;
+	border-radius: 2rem;
 }
 
 .search input {
