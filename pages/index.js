@@ -13,7 +13,6 @@ const Home = () => {
 		<main className={s.mainContainer}>
 			<section className={s.section_1}>
 				<h1 className={s.header}>Næringsrådets Bedriftmedlemmer</h1>
-				<Search />
 				<div className={s.figure}>
 					<img
 						src={figure.src}
@@ -29,6 +28,8 @@ const Home = () => {
 						width={100}
 					/>
 				</div>
+				<Search />
+
 				<div className={s.sponsorHeading}>
 					<h2>Våre hovudsamarbeidspartnare</h2>
 					<img
@@ -40,7 +41,7 @@ const Home = () => {
 					<MainSponsors />
 				</div>
 				<div className={s.sponsorHeading}>
-					<h2>Våre samarbeidspartnare</h2>
+					<h1>Våre samarbeidspartnare</h1>
 					<img
 						src={icons.secondarySponsor.src}
 						alt='Main Sponsors'
