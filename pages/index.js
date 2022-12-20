@@ -12,8 +12,8 @@ const Home = () => {
 	return (
 		<main className={s.mainContainer}>
 			<section className={s.section_1}>
-				<h1 className={s.header}>Næringsrådets Bedriftmedlemmer</h1>
 				<div className={s.figure}>
+					Våre medlemmer
 					<img
 						src={figure.src}
 						alt='figure'
