@@ -17,15 +17,20 @@
 	height: auto;
 	min-width: 100%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	overflow: hidden;
+	margin-bottom: 1rem;
+	align-items: center;
+	font-weight: 600;
+}
+
+.figure_text {
+	font-weight: 300;
 }
 
 .figure img {
 	max-width: 12rem;
 	height: 5rem;
-	position: relative;
-	top: 2rem;
 }
 
 .header {
