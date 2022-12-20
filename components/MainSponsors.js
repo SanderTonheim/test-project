@@ -19,25 +19,22 @@ export default function MainSponsors() {
 	}, [])
 
 	return (
-		<>
-			<div className={s.container}>
-				{data.map((item) => {
-					console.log(item)
-					return (
-						<Link
-							href={'/profile/' + item.slug.current}
-							className={s.card}
-							key={item._id}>
-							<img
-								className={s.logo}
-								src={urlFor(item.logo.asset._ref)}
-								alt=''
-							/>
-							<div className={s.text}>{item.sponsorCardText}</div>
-						</Link>
-					)
-				})}
-			</div>
-		</>
+		<div className={s.container}>
+			{data.map((item) => {
+				return (
+					<Link
+						href={'/profile/' + item.slug.current}
+						className={s.card}
+						key={item._id}>
+						<img
+							className={s.logo}
+							src={urlFor(item.logo.asset._ref)}
+							alt=''
+						/>
+						<p>{item.sponsorCardText}</p>
+					</Link>
+				)
+			})}
+		</div>
 	)
 }
