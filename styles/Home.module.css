@@ -34,16 +34,9 @@
 }
 
 .section_2 {
-	background-color: #27a2ac;
 	padding: 0 0 1rem;
 }
 
-.section_2 > h2 {
-	padding: 1rem;
-	color: white;
-	display: flex;
-	justify-content: center;
-}
 .arrow {
 	display: flex;
 	justify-content: center;
@@ -52,7 +45,7 @@
 }
 
 .sponsorHeading {
-	color: white;
+	color: black;
 	display: flex;
 	align-items: center;
 	margin: 0 auto;
@@ -60,6 +53,11 @@
 	justify-content: space-evenly;
 	padding: 0 2rem;
 	flex-wrap: wrap;
+}
+
+.sponsorHeading h2 {
+	color: black;
+	font-weight: 200;
 }
 
 .sponsorHeading img {
