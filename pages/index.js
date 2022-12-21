@@ -41,7 +41,7 @@ const Home = () => {
 					<MainSponsors />
 				</div>
 				<div className={s.sponsorHeading}>
-					<h1>Våre samarbeidspartnare</h1>
+					<h2>Våre samarbeidspartnare</h2>
 					<img
 						src={icons.secondarySponsor.src}
 						alt='Main Sponsors'
