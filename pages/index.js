@@ -12,8 +12,8 @@ const Home = () => {
 	return (
 		<main className={s.mainContainer}>
 			<section className={s.section_1}>
-				<div className={s.figure}>
-					Våre medlemmer
+				<div className={s.content}>
+					<p>Våre medlemmer</p>
 					<img
 						src={figure.src}
 						alt='figure'
