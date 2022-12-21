@@ -30,25 +30,27 @@ export default function Navbar() {
 	return (
 		<>
 			<div className={s.navbar}>
-				<Image
-					src={logo}
-					width={150}
-					height={50}
-				/>
-				<div
-					ref={refOne}
-					className={s.menu}>
+				<div className={s.content}>
 					<Image
-						src={menuIcon}
-						width={30}
-						height={25}
-						onClick={toggle}
-						alt=''
+						src={logo}
+						width={150}
+						height={50}
 					/>
-				</div>
-				<div className={s.links}>
-					<Link href='/'>Hjem</Link>
-					<Link href='/profile'>About</Link>
+					<div
+						ref={refOne}
+						className={s.menu}>
+						<Image
+							src={menuIcon}
+							width={30}
+							height={25}
+							onClick={toggle}
+							alt=''
+						/>
+					</div>
+					<div className={s.links}>
+						<Link href='/'>Hjem</Link>
+						<Link href='/profile'>About</Link>
+					</div>
 				</div>
 			</div>
 			<divs className={s.dropDownMenu}>{open ? <DropDownMenu /> : null}</divs>
