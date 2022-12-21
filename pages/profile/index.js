@@ -1,7 +1,8 @@
-import Link from 'next/link'
 import s from '../../styles/profileIndex.module.css'
+import Link from 'next/link'
 import Search from '../../components/search'
 import icons from '../../assets/icons/index'
+import arrow from '../../assets/arrow.svg'
 /* --------------------------------- sanity --------------------------------- */
 import { getClient } from '../../lib/sanity.server'
 import groq from 'groq'
@@ -13,29 +14,37 @@ const ProfileList = ({ medlem }) => {
 	console.log(isMainSponsor)
 
 	return (
-		<div className={s.container}>
+		<>
 			<h1 className={s.header}>Medlemsliste</h1>
-			<section className={s.search}>
-				<Search />
-			</section>
-			{medlem.map((medlem) => {
-				return (
-					<div
-						className={s.company}
-						key={medlem._id}>
-						<Link
-							className={s.link}
-							href={'/profile/' + medlem.slug.current.toString()}>
-							{medlem.name}
-						</Link>
-						<img
-							src={icons.member.src}
-							alt=''
-						/>
-					</div>
-				)
-			})}
-		</div>
+			<div className={s.arrow}>
+				<img
+					src={arrow.src}
+					alt='figure'
+				/>
+			</div>
+			<div className={s.container}>
+				<section className={s.search}>
+					<Search />
+				</section>
+				{medlem.map((medlem) => {
+					return (
+						<div
+							className={s.company}
+							key={medlem._id}>
+							<Link
+								className={s.link}
+								href={'/profile/' + medlem.slug.current.toString()}>
+								{medlem.name}
+							</Link>
+							<img
+								src={icons.member.src}
+								alt=''
+							/>
+						</div>
+					)
+				})}
+			</div>
+		</>
 	)
 }
 export default ProfileList
