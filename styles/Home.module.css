@@ -17,7 +17,7 @@
 	height: auto;
 	min-width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	overflow: hidden;
 	margin-bottom: 1rem;
 	align-items: center;
@@ -78,4 +78,14 @@
 }
 /* --------------------------------- Desktop -------------------------------- */
 @media screen and (min-width: 769px) and (max-width: 1440px) {
+	.content {
+		display: flex;
+		width: 60rem;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.content p {
+		font-size: 2rem;
+	}
 }
