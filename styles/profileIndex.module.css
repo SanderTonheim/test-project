@@ -20,21 +20,18 @@
 }
 
 .list {
-	max-width: fit-content;
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 60rem;
+	/* justify-content: center; */
 }
 .company {
-	flex-basis: 50%;
+	min-width: 20rem;
+	max-width: 20rem;
 	display: flex;
 	align-items: center;
 	gap: 1rem;
 	flex-direction: row-reverse;
-}
-
-.company .link {
-	flex-basis: 50%;
+	justify-content: flex-end;
 }
 
 .company a:any-link {
