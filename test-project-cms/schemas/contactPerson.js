@@ -1,7 +1,7 @@
 export default {
 	title: 'Kontakt person',
 	name: 'contactPerson',
-	type: 'document',
+	type: 'object',
 	fields: [
 		{
 			title: 'Avdeling',

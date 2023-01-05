@@ -8,14 +8,12 @@
 	max-width: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
 	padding: 0 1rem;
 }
 
 .figure {
 	height: auto;
-	min-width: 100%;
+	max-width: 60%;
 	display: flex;
 	justify-content: space-between;
 	overflow: hidden;
@@ -24,18 +22,17 @@
 	font-weight: 600;
 }
 
-.figure_text {
-	font-weight: 300;
-}
-
-.figure img {
-	max-width: 12rem;
-	height: 5rem;
-}
-
 .header {
-	color: rgba(254, 254, 254, 0.985);
+	color: rgba(33, 33, 33, 0.985);
 	margin-bottom: 1rem;
+	font-size: 1.2rem;
+	flex-basis: 50%;
+	align-self: center;
+}
+
+.section_1 .content {
+	display: flex;
+	justify-content: space-between;
 }
 
 .section_2 {

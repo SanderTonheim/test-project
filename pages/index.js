@@ -13,8 +13,9 @@ const Home = () => {
 		<main className={s.mainContainer}>
 			<section className={s.section_1}>
 				<div className={s.content}>
-					<p>Våre medlemmer</p>
+					<p className={s.header}>Våre medlemmer</p>
 					<img
+						className={s.figure}
 						src={figure.src}
 						alt='figure'
 					/>

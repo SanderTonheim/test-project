@@ -11,7 +11,6 @@ const ProfileList = ({ medlem }) => {
 	const isMainSponsor = medlem.filter((mainSponsors) => {
 		return mainSponsors
 	})
-	console.log(isMainSponsor)
 
 	return (
 		<>
@@ -26,23 +25,27 @@ const ProfileList = ({ medlem }) => {
 				<section className={s.search}>
 					<Search />
 				</section>
-				{medlem.map((medlem) => {
-					return (
-						<div
-							className={s.company}
-							key={medlem._id}>
-							<Link
-								className={s.link}
-								href={'/profile/' + medlem.slug.current.toString()}>
-								{medlem.name}
-							</Link>
-							<img
-								src={icons.member.src}
-								alt=''
-							/>
-						</div>
-					)
-				})}
+				<section className={s.list}>
+					{medlem.map((medlem) => {
+						return (
+							<div
+								className={s.company}
+								key={medlem._id}>
+								<Link
+									className={s.link}
+									href={'/profile/' + medlem.slug.current.toString()}>
+									{medlem.name}
+								</Link>
+								<div className={s.image}>
+									<img
+										src={icons.member.src}
+										alt=''
+									/>
+								</div>
+							</div>
+						)
+					})}
+				</section>
 			</div>
 		</>
 	)

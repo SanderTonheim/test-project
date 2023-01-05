@@ -49,7 +49,7 @@ export default function Navbar() {
 					</div>
 					<div className={s.links}>
 						<Link href='/'>Hjem</Link>
-						<Link href='/profile'>About</Link>
+						<Link href='/profile'>Medlemsliste</Link>
 					</div>
 				</div>
 			</div>

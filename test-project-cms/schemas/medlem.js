@@ -7,25 +7,9 @@ export default {
 
 	fields: [
 		/* ------------------------------ experimental ------------------------------ */
-		{
-			title: 'Tekst på sponsorkort',
-			name: 'sponsorCardText',
-			type: 'string',
-		},
 
-		{
-			title: 'Tilknyttninger',
-			name: 'connections',
-			type: 'array',
-			of: [
-				{
-					type: 'reference',
-					to: { type: 'connections' },
-				},
-			],
-		},
 		/* --------------------------------- stabil --------------------------------- */
-
+		/* ---------------------------------- final --------------------------------- */
 		{
 			title: 'Navn',
 			name: 'name',
@@ -37,23 +21,22 @@ export default {
 			type: 'image',
 		},
 		{
-			title: 'Hovedsamarbeidspartner?',
-			name: 'MainSponsor',
-			type: 'boolean',
+			title: 'Adresse',
+			name: 'address',
+			type: 'string',
 		},
 		{
-			title: 'Samarbeidspartner?',
-			name: 'SecondarySponsor',
-			type: 'boolean',
+			title: 'Post nummer',
+			name: 'zip',
+			type: 'string',
 		},
 		{
-			title: 'Tags',
-			name: 'tag',
+			title: 'Kontakt person',
+			name: 'contactPerson',
 			type: 'array',
 			of: [
 				{
-					type: 'reference',
-					to: { type: 'tags' },
+					type: 'contactPerson',
 				},
 			],
 		},
@@ -69,32 +52,65 @@ export default {
 			],
 		},
 		{
-			title: 'Adresse',
-			name: 'address',
-			type: 'string',
+			title: 'Tilknyttninger',
+			name: 'connections',
+			type: 'array',
+			of: [
+				{
+					type: 'reference',
+					to: { type: 'connections' },
+				},
+			],
 		},
 		{
-			title: 'Post sted',
-			name: 'zip',
+			title: 'Hovedsamarbeidspartner',
+			name: 'MainSponsor',
+			type: 'boolean',
+		},
+		{
+			title: 'Sponsorkort tekst',
+			name: 'sponsorCardText',
 			type: 'string',
+			hidden: ({ document }) => !document?.MainSponsor,
+		},
+		{
+			title: 'Samarbeidspartner',
+			name: 'SecondarySponsor',
+			type: 'boolean',
+		},
+		{
+			title: 'Sponsorkort tekst',
+			name: 'SecondarysponsorCardText',
+			type: 'string',
+			hidden: ({ document }) => !document?.SecondarySponsor,
+		},
+		/* -------------------------------------------------------------------------- */
+
+		{
+			title: 'Kart visning',
+			name: 'ActiveMap',
+			type: 'boolean',
 		},
 		{
 			title: 'Kart',
 			name: 'location',
 			type: 'geopoint',
 			inputComponent: LeafletGeopointInput,
+			hidden: ({ document }) => !document?.ActiveMap,
 		},
 
 		{
-			title: 'Kontakt person',
-			name: 'contactPerson',
+			title: 'Tags',
+			name: 'tag',
 			type: 'array',
 			of: [
 				{
-					type: 'contactPerson',
+					type: 'reference',
+					to: { type: 'tags' },
 				},
 			],
 		},
+
 		{
 			name: 'website',
 			title: 'Nettside',

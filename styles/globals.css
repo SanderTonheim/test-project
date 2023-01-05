@@ -21,13 +21,13 @@ div#__next {
 } */
 
 html {
-	height: 100vh;
+	height: max-content;
 }
 
 div#__next,
 body {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	height: 100%;
 	max-width: 100%;
 }

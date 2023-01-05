@@ -47,12 +47,16 @@ export default function ProfilePage({ post }) {
 					</div>
 				</div>
 			</div>
-			<div className={s.map}>
-				<CompanyMap
-					lat={post.location.lat}
-					lng={post.location.lng}
-				/>
-			</div>
+			{post.ActiveMap == false ? (
+				' '
+			) : (
+				<div className={s.map}>
+					<CompanyMap
+						lat={post.location.lat}
+						lng={post.location.lng}
+					/>
+				</div>
+			)}
 		</>
 	)
 }
@@ -90,7 +94,8 @@ export async function getStaticProps(context) {
 	contactPerson,
 	website,
 	address,
-	zip
+	zip,
+	ActiveMap
 }`,
 		{ slug }
 	)

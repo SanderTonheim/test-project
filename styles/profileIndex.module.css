@@ -16,25 +16,34 @@
 	display: flex;
 	justify-content: center;
 	padding: 1rem 0;
+	padding-bottom: 3rem;
 }
 
+.list {
+	max-width: fit-content;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 60rem;
+}
 .company {
-	gap: 1rem;
-	width: 10rem;
-	align-items: center;
-	justify-content: flex-end;
-
+	flex-basis: 50%;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	gap: 1rem;
+	flex-direction: row-reverse;
 }
+
+.company .link {
+	flex-basis: 50%;
+}
+
 .company a:any-link {
 	color: black;
 	text-decoration: none;
 }
 
 .company img {
-	width: 2rem;
+	max-width: 2rem;
 }
 
 .company :hover {
@@ -61,5 +70,3 @@
 	position: relative;
 	top: -0.03rem;
 }
-
-
