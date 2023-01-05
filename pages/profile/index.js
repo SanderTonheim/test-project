@@ -53,12 +53,13 @@ const ProfileList = ({ medlem }) => {
 export default ProfileList
 
 /* ------------------------------ sanity fetch ------------------------------ */
-export async function getStaticProps() {
+export async function getStaticProps({ preview = false }) {
 	const medlem = await getClient(preview).fetch(groq`*[_type == 'medlem']`)
 
 	return {
 		props: {
 			medlem,
 		},
+		revalidate: 10,
 	}
 }
