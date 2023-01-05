@@ -53,7 +53,7 @@ const ProfileList = ({ medlem }) => {
 export default ProfileList
 
 /* ------------------------------ sanity fetch ------------------------------ */
-export async function getStaticProps({ preview = true }) {
+export async function getStaticProps() {
 	const medlem = await getClient(preview).fetch(groq`*[_type == 'medlem']`)
 
 	return {
