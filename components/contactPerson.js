@@ -10,7 +10,7 @@ export default function ContactPerson({ list, website, address }) {
 					<ul
 						key={contact._key}
 						className={s.container}>
-						{contact.department?.length > 1 ? <h3>{contact.department}</h3> : ''}
+						{contact.department > 1 ? <h3>{contact.department}</h3> : ''}
 
 						{contact.name?.length > 1 ? (
 							<div className={s.name}>
