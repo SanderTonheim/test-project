@@ -5,10 +5,10 @@ import Head from 'next/head'
 // templet komponent som man wrapper rundt andre komponenter slik. Kan brukes flere ganger
 export default function Layout({ children }) {
 	return (
-		<>
+		<div className={styles.content}>
 			<Navbar />
-			<div className={styles.content}>{children}</div>
+			{children}
 			<Footer />
-		</>
+		</div>
 	)
 }
