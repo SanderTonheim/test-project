@@ -12,7 +12,7 @@ export default function ContactPerson({ list, website, address }) {
 						className={s.container}>
 						{contact.department > 1 ? <h3>{contact.department}</h3> : ''}
 
-						{contact.name?.length > 1 ? (
+						{contact?.name.length > 1 ? (
 							<div className={s.name}>
 								<img
 									className={s.icon}
@@ -64,7 +64,7 @@ export default function ContactPerson({ list, website, address }) {
 					</ul>
 				)
 			})}
-			{website.length > 0 ? (
+			{website?.length > 0 ? (
 				<div className={s.website}>
 					<img
 						className={s.icon}
