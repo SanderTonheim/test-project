@@ -15,44 +15,47 @@ import icons from '../../assets/icons/index'
 export default function ProfilePage({ post }) {
 	const logo = urlFor(post.logo.asset._ref)
 	return (
-		<div className={s.container}>
-			<h1>
-				<img src={icons.member.src} />
-				{post.name}
-			</h1>
-			<div className={s.section_1}>
-				<p className={s.text}>{post.text}</p>
-				<img
-					className={s.logo}
-					src={logo}
-					alt='Logo'
-				/>
-			</div>
-			<div className={s.section_2}>
-				<div>
-					{post.tag < 1 ? ' ' : <Tags list={post.tag} />}
-					{post.certifications < 1 ? '' : <Certifications list={post.certifications} />}
-					{post.connections && <Connections list={post.connections} />}
+		<>
+			<div className={s.container}>
+				<h1>
+					<img src={icons.member.src} />
+					{post.name}
+				</h1>
+				<div className={s.section_1}>
+					<p className={s.text}>{post.text}</p>
+					<img
+						className={s.logo}
+						src={logo}
+						alt='Logo'
+					/>
 				</div>
-				<div className={s.contacts}>
-					{post.contactPerson && (
-						<Contacts
-							list={post.contactPerson}
-							website={post.website}
-							address={post.address}
-						/>
-					)}
+				<div className={s.section_2}>
+					<div>
+						{post.tag < 1 ? ' ' : <Tags list={post.tag} />}
+						{post.certifications < 1 ? '' : <Certifications list={post.certifications} />}
+						{post.connections && <Connections list={post.connections} />}
+					</div>
+					<div className={s.contacts}>
+						{post.contactPerson && (
+							<Contacts
+								list={post.contactPerson}
+								website={post.website}
+								address={post.address}
+							/>
+						)}
+					</div>
 				</div>
+
+				{post.ActiveMap == false ? (
+					' '
+				) : (
+					<CompanyMap
+						lat={post.location.lat}
+						lng={post.location.lng}
+					/>
+				)}
 			</div>
-			{post.ActiveMap == false ? (
-				' '
-			) : (
-				<CompanyMap
-					lat={post.location.lat}
-					lng={post.location.lng}
-				/>
-			)}
-		</div>
+		</>
 	)
 }
 
