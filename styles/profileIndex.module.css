@@ -22,21 +22,23 @@
 .list {
 	display: flex;
 	flex-wrap: wrap;
-	/* justify-content: center; */
+	max-width: 40rem;
+	justify-content: center;
+	gap: 0.5rem;
 }
+
 .company {
-	min-width: 20rem;
-	max-width: 20rem;
 	display: flex;
 	align-items: center;
-	gap: 1rem;
 	flex-direction: row-reverse;
-	justify-content: flex-end;
+	justify-content: center;
+	gap: 1rem;
 }
 
 .company a:any-link {
 	color: black;
 	text-decoration: none;
+	width: 10rem;
 }
 
 .company img {
@@ -66,4 +68,20 @@
 	justify-content: center;
 	position: relative;
 	top: -0.03rem;
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+	.list {
+		justify-content: flex-start;
+		max-width: 30rem;
+		justify-content: center;
+	}
+}
+
+@media screen and (min-width: 769px) {
+	.list {
+		justify-content: flex-start;
+		max-width: 30rem;
+		justify-content: center;
+	}
 }
