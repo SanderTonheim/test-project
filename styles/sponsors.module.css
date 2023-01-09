@@ -41,6 +41,7 @@
 .text {
 	max-width: 100%;
 	display: flex;
+	padding: 0 3rem;
 	align-items: flex-start;
 	justify-content: flex-start;
 }
