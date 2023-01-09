@@ -1,11 +1,11 @@
-import s from '../styles/Home.module.css'
+import s from '../styles/home.module.css'
 import Search from '../components/search'
-import MainSponsors from '../components/MainSponsors'
+import MainSponsors from '../components/mainSponsors'
 import arrow from '../assets/arrow.svg'
 import Image from 'next/image'
 import { Autocomplete } from '@react-google-maps/api'
 import figure from '../assets/frontPageFigure.png'
-import SecondarySponsors from '../components/SecondarySponsors'
+import SecondarySponsors from '../components/secondarySponsors'
 import icons from '../assets/icons'
 
 const Home = () => {

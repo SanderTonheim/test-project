@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import s from '../styles/Footer.module.css'
+import s from '../styles/footer.module.css'
 import azets from '../assets/mainSponsorsLogo/azets.svg'
 import ecit from '../assets/mainSponsorsLogo/ECIT.svg'
 import framo from '../assets/mainSponsorsLogo/FRAMO.svg'

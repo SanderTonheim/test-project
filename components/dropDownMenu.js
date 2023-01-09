@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useEffect, useRef } from 'react'
-import s from '../styles/DropDownMenu.module.css'
+import s from '../styles/dropDownMenu.module.css'
 
 const DropDownMenu = () => {
 	return (

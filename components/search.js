@@ -17,7 +17,6 @@ export default function Search() {
 			"https://8rpris03.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%20%3D%3D%20%22medlem%22%5D%20%7Bslug%2CsponsorCardText%2C%20name%2C%20%20%20_id%2C%20%20logo%2Ctext%2Ctag%5B%5D-%3E%7B%20'icon'%3Aicon.asset._ref%2C%20'name'%3A%20Name%7D%20%2C%20%20certifications%5B%5D-%3E%7B%20'icon'%3Aicon.asset._ref%2C%20'name'%3A%20name%7D%2Cconnections%7D%0A"
 		).then((fetching) => fetching.json())
 		const data = await fetching
-		console.log(data.result)
 		return data.result
 	}
 	cmsData()

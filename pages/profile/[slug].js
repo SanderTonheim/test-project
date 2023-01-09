@@ -4,8 +4,8 @@ import { getClient } from '../../lib/sanity.server'
 import groq from 'groq'
 import urlFor from '../../lib/sanity'
 import CompanyMap from '../../components/map'
-import Certifications from '../../components/Certifications'
-import Tags from '../../components/Tags'
+import Certifications from '../../components/certifications'
+import Tags from '../../components/tags'
 import Contacts from '../../components/contactPerson'
 import s from '../../styles/slug.module.css'
 import Connections from '../../components/connections'
@@ -14,7 +14,6 @@ import icons from '../../assets/icons/index'
 /* ------------------------------------ Render items on page ----------------------------------- */
 export default function ProfilePage({ post }) {
 	const logo = urlFor(post.logo.asset._ref)
-	console.log(post)
 	return (
 		<div className={s.container}>
 			<h1>

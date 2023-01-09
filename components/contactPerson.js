@@ -1,4 +1,4 @@
-import s from '../styles/ContactPerson.module.css'
+import s from '../styles/contactPerson.module.css'
 import icon from '../assets/icons/index'
 import Link from 'next/link'
 

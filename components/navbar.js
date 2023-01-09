@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import s from '../styles/Navbar.module.css'
+import s from '../styles/navbar.module.css'
 import menuIcon from '../assets/menu-icon.png'
-import DropDownMenu from './DropDownMenu'
+import DropDownMenu from './dropDownMenu'
 import logo from '../assets/logo.svg'
 import { useEffect, useRef, useState } from 'react'
 
